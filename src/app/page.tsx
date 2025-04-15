@@ -40,44 +40,44 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-black text-white overflow-x-hidden">
+    <div className="flex flex-col min-h-screen bg-white text-gray-900 overflow-x-hidden">
       {/* Header with navigation - now sticky with transparency on scroll */}
       <header className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'bg-black bg-opacity-50 backdrop-blur-sm' : 'bg-black'
+        scrollY > 50 ? 'bg-white bg-opacity-70 backdrop-blur-sm' : 'bg-white'
       }`}>
         <nav className="container mx-auto flex justify-center py-4">
           <div className={`flex space-x-6 px-6 py-2 rounded-full ${
-            scrollY > 50 ? 'bg-black bg-opacity-30' : 'bg-black bg-opacity-70'
-          } border border-blue-800`}>
+            scrollY > 50 ? 'bg-white bg-opacity-70' : 'bg-white bg-opacity-90'
+          } border border-red-700`}>
             {/* Home link */}
-            <Link href="/" className="px-4 py-2 hover:text-blue-400 transition-colors font-medium">
+            <Link href="/" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
               HOME
             </Link>
             
             {/* Types of Plastics dropdown */}
             <div className="relative" onMouseEnter={() => setTypesDropdownOpen(true)} onMouseLeave={() => setTypesDropdownOpen(false)}>
-              <Link href="/types" className="px-4 py-2 hover:text-blue-400 transition-colors font-medium flex items-center">
+              <Link href="/types" className="px-4 py-2 hover:text-red-600 transition-colors font-medium flex items-center">
                 TYPES OF PLASTICS
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Link>
               
               {/* Dropdown menu */}
               {typesDropdownOpen && (
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-blue-900 bg-opacity-90 backdrop-blur-sm ring-1 ring-black ring-opacity-5 z-50">
+                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-red-700 ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1" role="menu" aria-orientation="vertical">
-                    <Link href="/types/plastic-1" className="block px-4 py-2 text-sm text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">
+                    <Link href="/types/plastic-1" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
                       Plastic #1 (PET)
                     </Link>
-                    <Link href="/types/plastic-2" className="block px-4 py-2 text-sm text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">
+                    <Link href="/types/plastic-2" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
                       Plastic #2 (HDPE)
                     </Link>
-                    <Link href="/types/plastic-3" className="block px-4 py-2 text-sm text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">
+                    <Link href="/types/plastic-3" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
                       Plastic #3 (PVC)
                     </Link>
-                    <Link href="/types/plastic-4" className="block px-4 py-2 text-sm text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">
+                    <Link href="/types/plastic-4" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
                       Plastic #4 (LDPE)
                     </Link>
-                    <Link href="/types/plastic-5" className="block px-4 py-2 text-sm text-blue-100 hover:bg-blue-800 hover:text-white transition-colors">
+                    <Link href="/types/plastic-5" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
                       Plastic #5 (PP)
                     </Link>
                   </div>
@@ -86,14 +86,17 @@ export default function Home() {
             </div>
             
             {/* Other main navigation links */}
-            <Link href="/formation" className="px-4 py-2 hover:text-blue-400 transition-colors font-medium">
+            <Link href="/formation" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
               PLASTIC FORMATION
             </Link>
-            <Link href="/environmental" className="px-4 py-2 hover:text-blue-400 transition-colors font-medium">
+            <Link href="/environmental" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
               ENVIRONMENTAL EFFECTS
             </Link>
-            <Link href="/solutions" className="px-4 py-2 hover:text-blue-400 transition-colors font-medium">
+            <Link href="/solutions" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
               APPROACHES & SOLUTIONS
+            </Link>
+            <Link href="/citations" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
+              CITATIONS
             </Link>
           </div>
         </nav>
@@ -101,10 +104,10 @@ export default function Home() {
 
       {/* Main content - adjusted for fixed navbar */}
       <main className="flex-1 relative pt-20">
-        {/* Earth background with overlay */}
+        {/* Background with overlay */}
         <div className="fixed inset-0 z-0">
           {/* Grid overlay */}
-          <div className="absolute inset-0 bg-grid-pattern opacity-30"></div>
+          <div className="absolute inset-0 bg-grid-pattern opacity-20"></div>
           
           {/* Earth image */}
           <div className="absolute top-0 right-0 w-full md:w-2/3 h-full">
@@ -113,7 +116,7 @@ export default function Home() {
                 <img 
                   src="/api/placeholder/800/800" 
                   alt="Earth view" 
-                  className="rounded-full opacity-70 animation-rotate"
+                  className="rounded-full opacity-50 animation-rotate"
                   style={{
                     position: 'absolute',
                     top: '-25%',
@@ -128,7 +131,7 @@ export default function Home() {
           </div>
           
           {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-white via-white to-transparent"></div>
         </div>
 
         {/* Title section */}
@@ -136,23 +139,23 @@ export default function Home() {
           <div className="container mx-auto px-6">
             <div className="max-w-3xl transition-all duration-1000 transform"
                  style={{opacity: isVisible.hero ? 1 : 0, transform: isVisible.hero ? 'translateY(0)' : 'translateY(50px)'}}>
-              <h1 className="text-7xl md:text-9xl font-bold mb-6 text-white">
+              <h1 className="text-7xl md:text-9xl font-bold mb-6 text-gray-900">
                 <span className="block">Plastics</span>
-                <span className="block text-blue-400">Revolution</span>
+                <span className="block text-red-600">Revolution</span>
               </h1>
-              <p className="text-xl md:text-2xl text-blue-200 mb-8 max-w-2xl leading-relaxed">
+              <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl leading-relaxed">
                 Exploring the materials that transformed modern life, their impact on our world, and sustainable futures.
               </p>
               <div className="flex space-x-4">
                 <Link 
                   href="/types" 
-                  className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors shadow-glow"
+                  className="px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors shadow-glow-red"
                 >
                   Explore Types
                 </Link>
                 <Link 
                   href="/environmental" 
-                  className="px-6 py-3 border border-blue-400 text-blue-400 rounded-md hover:bg-blue-900 hover:bg-opacity-30 transition-colors"
+                  className="px-6 py-3 border border-red-500 text-red-600 rounded-md hover:bg-red-50 transition-colors"
                 >
                   Environmental Impact
                 </Link>
@@ -162,35 +165,35 @@ export default function Home() {
           
           {/* Animated plastic particles */}
           <div className="absolute inset-0 pointer-events-none overflow-hidden">
-            <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-blue-400 rounded-full animate-float opacity-70" style={{animationDuration: '15s'}}></div>
-            <div className="absolute top-1/3 left-2/3 w-3 h-3 bg-blue-300 rounded-full animate-float opacity-60" style={{animationDuration: '18s', animationDelay: '2s'}}></div>
-            <div className="absolute top-2/3 left-1/3 w-5 h-5 bg-blue-500 rounded-full animate-float opacity-50" style={{animationDuration: '20s', animationDelay: '5s'}}></div>
-            <div className="absolute top-1/2 left-3/4 w-6 h-6 bg-blue-200 rounded-full animate-float opacity-40" style={{animationDuration: '25s', animationDelay: '1s'}}></div>
+            <div className="absolute top-1/4 left-1/4 w-4 h-4 bg-red-400 rounded-full animate-float opacity-70" style={{animationDuration: '15s'}}></div>
+            <div className="absolute top-1/3 left-2/3 w-3 h-3 bg-red-300 rounded-full animate-float opacity-60" style={{animationDuration: '18s', animationDelay: '2s'}}></div>
+            <div className="absolute top-2/3 left-1/3 w-5 h-5 bg-red-500 rounded-full animate-float opacity-50" style={{animationDuration: '20s', animationDelay: '5s'}}></div>
+            <div className="absolute top-1/2 left-3/4 w-6 h-6 bg-red-200 rounded-full animate-float opacity-40" style={{animationDuration: '25s', animationDelay: '1s'}}></div>
           </div>
         </section>
 
-        {/* Homepage Featured Content */}
+        {/* Homepage Featured Content - with more subdued colors */}
         <section className="relative z-10 py-20">
           <div className="container mx-auto px-6">
-            <h2 className="text-4xl font-bold mb-12 text-blue-400 text-center">Discover the World of Plastics</h2>
+            <h2 className="text-4xl font-bold mb-12 text-red-600 text-center">Discover the World of Plastics</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Featured Card 1 */}
-              <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-lg overflow-hidden shadow-glow group">
-                <div className="h-48 bg-blue-700 relative overflow-hidden">
+              {/* Featured Card 1 - More subdued */}
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg overflow-hidden shadow-md group border border-red-100">
+                <div className="h-48 bg-red-50 relative overflow-hidden">
                   <img 
                     src="/api/placeholder/400/300"
                     alt="Types of plastics" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-70"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-red-700 to-transparent opacity-30"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-blue-300">Plastic Types</h3>
-                  <p className="text-blue-100 mb-4">
+                  <h3 className="text-2xl font-bold mb-2 text-red-800">Plastic Types</h3>
+                  <p className="text-gray-700 mb-4">
                     Discover the different types of plastics, their properties, applications, and environmental impacts.
                   </p>
-                  <Link href="/types" className="text-blue-400 font-medium hover:text-blue-300 flex items-center">
+                  <Link href="/types" className="text-red-600 font-medium hover:text-red-700 flex items-center">
                     Learn more
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -199,22 +202,22 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Featured Card 2 */}
-              <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-lg overflow-hidden shadow-glow group">
-                <div className="h-48 bg-blue-700 relative overflow-hidden">
+              {/* Featured Card 2 - More subdued */}
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg overflow-hidden shadow-md group border border-red-100">
+                <div className="h-48 bg-red-50 relative overflow-hidden">
                   <img 
                     src="/api/placeholder/400/300"
                     alt="Plastic manufacturing" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-70"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-red-700 to-transparent opacity-30"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-blue-300">Manufacturing Process</h3>
-                  <p className="text-blue-100 mb-4">
+                  <h3 className="text-2xl font-bold mb-2 text-red-800">Manufacturing Process</h3>
+                  <p className="text-gray-700 mb-4">
                     Explore how plastics are created from raw materials to finished products through various techniques.
                   </p>
-                  <Link href="/formation" className="text-blue-400 font-medium hover:text-blue-300 flex items-center">
+                  <Link href="/formation" className="text-red-600 font-medium hover:text-red-700 flex items-center">
                     Learn more
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -223,22 +226,22 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Featured Card 3 */}
-              <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-lg overflow-hidden shadow-glow group">
-                <div className="h-48 bg-blue-700 relative overflow-hidden">
+              {/* Featured Card 3 - More subdued */}
+              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-lg overflow-hidden shadow-md group border border-red-100">
+                <div className="h-48 bg-red-50 relative overflow-hidden">
                   <img 
                     src="/api/placeholder/400/300"
                     alt="Environmental solutions" 
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900 to-transparent opacity-70"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-red-700 to-transparent opacity-30"></div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-blue-300">Sustainable Solutions</h3>
-                  <p className="text-blue-100 mb-4">
+                  <h3 className="text-2xl font-bold mb-2 text-red-800">Sustainable Solutions</h3>
+                  <p className="text-gray-700 mb-4">
                     Discover innovative approaches to plastic waste management and sustainable alternatives.
                   </p>
-                  <Link href="/solutions" className="text-blue-400 font-medium hover:text-blue-300 flex items-center">
+                  <Link href="/solutions" className="text-red-600 font-medium hover:text-red-700 flex items-center">
                     Learn more
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
@@ -251,13 +254,13 @@ export default function Home() {
         </section>
 
         {/* Call to Action */}
-        <section className="relative z-10 py-20 bg-blue-900 bg-opacity-30">
+        <section className="relative z-10 py-20 bg-red-50">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-4 text-blue-300">Ready to Learn More?</h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-8">
+            <h2 className="text-3xl font-bold mb-4 text-red-800">Ready to Learn More?</h2>
+            <p className="text-xl text-gray-700 max-w-2xl mx-auto mb-8">
               Explore our comprehensive guides on plastic types, formation processes, environmental impacts, and sustainable solutions.
             </p>
-            <Link href="/types" className="px-8 py-4 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors shadow-glow text-lg font-medium">
+            <Link href="/types" className="px-8 py-4 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors shadow-glow-red text-lg font-medium">
               Start Exploring
             </Link>
           </div>
@@ -265,20 +268,10 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="relative z-10 bg-blue-900 bg-opacity-30 border-t border-blue-800 py-8">
+      <footer className="relative z-10 bg-red-50 border-t border-red-100 py-8">
         <div className="container mx-auto px-6 text-center">
-          <p className="text-blue-300 mb-2">© 2025 Plastics Revolution | Educational Resources</p>
-          <div className="flex justify-center space-x-6 mt-4">
-            <Link href="/about" className="text-blue-400 hover:text-blue-200 transition-colors">
-              About
-            </Link>
-            <Link href="/sources" className="text-blue-400 hover:text-blue-200 transition-colors">
-              Sources
-            </Link>
-            <Link href="/contact" className="text-blue-400 hover:text-blue-200 transition-colors">
-              Contact
-            </Link>
-          </div>
+          <p className="text-gray-700 mb-2">Designed and Developed by Ankit Kale, Sreeram Vuppala, and Abhiram Kuuram</p>
+          <p> South Brunswick High School Team A, 2025 </p>
         </div>
       </footer>
 
@@ -295,8 +288,8 @@ export default function Home() {
         }
         
         .bg-grid-pattern {
-          background-image: linear-gradient(rgba(29, 78, 216, 0.1) 1px, transparent 1px),
-                            linear-gradient(90deg, rgba(29, 78, 216, 0.1) 1px, transparent 1px);
+          background-image: linear-gradient(rgba(220, 38, 38, 0.05) 1px, transparent 1px),
+                            linear-gradient(90deg, rgba(220, 38, 38, 0.05) 1px, transparent 1px);
           background-size: 20px 20px;
         }
         
@@ -304,8 +297,8 @@ export default function Home() {
           animation: rotate 120s linear infinite;
         }
         
-        .shadow-glow {
-          box-shadow: 0 0 15px rgba(37, 99, 235, 0.5);
+        .shadow-glow-red {
+          box-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
         }
         
         .animate-float {
