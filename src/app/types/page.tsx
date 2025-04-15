@@ -176,7 +176,7 @@ export default function Types() {
             
             {/* Types of Plastics dropdown */}
             <div className="relative" onMouseEnter={() => setTypesDropdownOpen(true)} onMouseLeave={() => setTypesDropdownOpen(false)}>
-              <Link href="/types" className="px-4 py-2 text-red-600 transition-colors font-medium flex items-center">
+              <Link href="/types" className="px-4 py-2 hover:text-red-600 transition-colors font-medium flex items-center">
                 TYPES OF PLASTICS
                 <ChevronDown className="ml-1 h-4 w-4" />
               </Link>
@@ -186,19 +186,13 @@ export default function Types() {
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-red-700 ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1" role="menu" aria-orientation="vertical">
                     <Link href="/types/plastic-1" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #1 (PET)
+                      Plastic #1
                     </Link>
                     <Link href="/types/plastic-2" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #2 (HDPE)
+                      Plastic #2
                     </Link>
                     <Link href="/types/plastic-3" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #3 (PVC)
-                    </Link>
-                    <Link href="/types/plastic-4" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #4 (LDPE)
-                    </Link>
-                    <Link href="/types/plastic-5" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #5 (PP)
+                      Plastic #3
                     </Link>
                   </div>
                 </div>
@@ -407,19 +401,6 @@ export default function Types() {
                           </div>
                         </div>
                       </div>
-                      
-                      {/* Footer */}
-                      <div className="border-t border-gray-200 bg-gray-50 p-4 flex justify-between items-center">
-                        <div className="text-gray-600 text-sm">
-                          <span className="font-medium">Identification: </span>
-                          Look for the #{String(plastic.id).split('.')[0]} inside the recycling symbol
-                        </div>
-                        
-                        <Link href={`/types/plastic-${plastic.id}`} className="flex items-center text-red-600 hover:text-red-700 font-medium">
-                          Details 
-                          <ArrowRight size={16} className="ml-1" />
-                        </Link>
-                      </div>
                     </div>
                   </div>
                 </div>
@@ -428,7 +409,6 @@ export default function Types() {
           </div>
         </section>
       </main>
-
       <footer className="relative z-10 bg-red-50 border-t border-red-100 py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-700 mb-2">Designed and Developed by Ankit Kale, Sreeram Vuppala, and Abhiram Kuuram</p>
