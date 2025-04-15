@@ -146,20 +146,7 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-gray-700 mb-8 max-w-2xl leading-relaxed">
                 Exploring the materials that transformed modern life, their impact on our world, and sustainable futures.
               </p>
-              <div className="flex space-x-4">
-                <Link 
-                  href="/types" 
-                  className="px-6 py-3 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors shadow-glow-red"
-                >
-                  Explore Types
-                </Link>
-                <Link 
-                  href="/environmental" 
-                  className="px-6 py-3 border border-red-500 text-red-600 rounded-md hover:bg-red-50 transition-colors"
-                >
-                  Environmental Impact
-                </Link>
-              </div>
+              
             </div>
           </div>
           
@@ -250,19 +237,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="relative z-10 py-20 bg-red-50">
-          <div className="container mx-auto px-6 text-center">
-            <h2 className="text-3xl font-bold mb-4 text-red-800">Ready to Learn More?</h2>
-            <p className="text-xl text-gray-700 max-w-2xl mx-auto mb-8">
-              Explore our comprehensive guides on plastic types, formation processes, environmental impacts, and sustainable solutions.
-            </p>
-            <Link href="/types" className="px-8 py-4 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors shadow-glow-red text-lg font-medium">
-              Start Exploring
-            </Link>
           </div>
         </section>
       </main>
