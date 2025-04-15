@@ -66,19 +66,13 @@ export default function Home() {
                 <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-red-700 ring-1 ring-black ring-opacity-5 z-50">
                   <div className="py-1" role="menu" aria-orientation="vertical">
                     <Link href="/types/plastic-1" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #1 (PET)
+                      Plastic #1
                     </Link>
                     <Link href="/types/plastic-2" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #2 (HDPE)
+                      Plastic #2
                     </Link>
                     <Link href="/types/plastic-3" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #3 (PVC)
-                    </Link>
-                    <Link href="/types/plastic-4" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #4 (LDPE)
-                    </Link>
-                    <Link href="/types/plastic-5" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #5 (PP)
+                      Plastic #3
                     </Link>
                   </div>
                 </div>
