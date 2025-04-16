@@ -55,15 +55,16 @@ export default function Home() {
     
     // Create camera with better perspective for complex molecule
     const camera = new THREE.PerspectiveCamera(60, 1, 0.1, 1000);
-    camera.position.z = 8;
+    camera.position.z = 10; // Increased camera distance to show more of the molecule
     
-    // Create renderer with higher quality settings
+    // Create renderer with higher quality settings and larger size
     const renderer = new THREE.WebGLRenderer({ 
       alpha: true, 
       antialias: true,
       precision: 'highp',
     });
-    renderer.setSize(500, 500);
+    // Increased size for better visibility
+    renderer.setSize(600, 600);
     renderer.setClearColor(0x000000, 0); // Transparent background
     renderer.setPixelRatio(window.devicePixelRatio);
     
@@ -333,7 +334,7 @@ export default function Home() {
         scrollY > 50 ? 'bg-white bg-opacity-80 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
         <div className="container mx-auto px-4">
-          <nav className="flex items-center justify-between py-4">      
+          <nav className="flex items-center justify-center py-4"> {/* Changed justify-between to justify-center */}      
             {/* Desktop Navigation */}
             <div className="hidden md:flex space-x-1">
               <Link href="/" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50">
@@ -386,9 +387,9 @@ export default function Home() {
               </Link>
             </div>
             
-            {/* Mobile menu button */}
+            {/* Mobile menu button - positioned absolutely to keep centered nav */}
             <button 
-              className="md:hidden text-gray-800 hover:text-red-600 focus:outline-none"
+              className="md:hidden absolute right-4 text-gray-800 hover:text-red-600 focus:outline-none"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             >
               {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -488,7 +489,7 @@ export default function Home() {
         {/* Title section with 3D molecule */}
         <section className="relative z-10 min-h-screen flex items-center">
           <div className="container mx-auto px-6">
-            <div className="flex flex-col md:flex-row items-center justify-between">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6"> {/* Added gap-6 and changed justify-between to justify-center */}
               {/* Text Content */}
               <div className="max-w-2xl transition-all duration-1000 transform mb-10 md:mb-0"
                    style={{opacity: isVisible.hero ? 1 : 0, transform: isVisible.hero ? 'translateY(0)' : 'translateY(50px)'}}>
@@ -517,11 +518,11 @@ export default function Home() {
                 </div>
               </div>
               
-            {/* 3D Molecule Container - Removed circle, made larger */}
-              <div className="w-80 h-80 md:w-120 md:h-120 relative transition-all duration-1000 transform ml-0 md:ml-8"
-                   style={{opacity: isVisible.hero ? 1 : 0, transform: isVisible.hero ? 'translateY(0)' : 'translateY(50px)'}}>
+              {/* 3D Molecule Container - Increased size and positioned closer to text */}
+              <div className="w-96 h-96 md:w-144 md:h-144 relative transition-all duration-1000 transform" 
+                  style={{opacity: isVisible.hero ? 1 : 0, transform: isVisible.hero ? 'translateY(0)' : 'translateY(50px)'}}>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <div ref={moleculeContainerRef} className="w-full h-full"></div>
+                  <div ref={moleculeContainerRef} className="w-full h-full transform scale-110"></div> {/* Added scale-110 to make molecule appear larger */}
                 </div>
               </div>
             </div>
@@ -535,14 +536,6 @@ export default function Home() {
             <div className="absolute top-1/2 left-3/4 w-6 h-6 bg-red-200 rounded-full animate-float opacity-40" style={{animationDuration: '25s', animationDelay: '1s'}}></div>
             <div className="absolute top-3/4 left-1/5 w-4 h-4 bg-red-300 rounded-full animate-float opacity-50" style={{animationDuration: '22s', animationDelay: '3s'}}></div>
             <div className="absolute top-1/6 left-2/5 w-5 h-5 bg-red-400 rounded-full animate-float opacity-60" style={{animationDuration: '19s', animationDelay: '4s'}}></div>
-          </div>
-          
-          {/* Scroll indicator */}
-          <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce-slow">
-            <span className="text-gray-600 mb-2 text-sm">Scroll to explore</span>
-            <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-            </svg>
           </div>
         </section>
 

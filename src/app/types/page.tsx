@@ -8,6 +8,8 @@ export default function Types() {
   const [scrollY, setScrollY] = useState(0);
   const [typesDropdownOpen, setTypesDropdownOpen] = useState(false);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+   // Mobile menu state
+   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activePlastic, setActivePlastic] = useState(1);
   const [isVisible, setIsVisible] = useState({
     hero: false,
@@ -178,56 +180,114 @@ export default function Types() {
     <div className="flex flex-col min-h-screen bg-white text-gray-900 overflow-x-hidden">
       {/* Header with navigation - now sticky with transparency on scroll */}
       <header className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'bg-white bg-opacity-70 backdrop-blur-sm' : 'bg-white'
+        scrollY > 50 ? 'bg-white bg-opacity-80 backdrop-blur-md shadow-lg' : 'bg-transparent'
       }`}>
-        <nav className="container mx-auto flex justify-center py-4">
-          <div className={`flex space-x-6 px-6 py-2 rounded-full ${
-            scrollY > 50 ? 'bg-white bg-opacity-70' : 'bg-white bg-opacity-90'
-          } border border-red-700`}>
-            {/* Home link */}
-            <Link href="/" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
-              HOME
-            </Link>
-            
-            {/* Types of Plastics dropdown */}
-            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <Link href="/types" className="px-4 py-2 hover:text-red-600 transition-colors font-medium flex items-center">
-                TYPES OF PLASTICS
-                <ChevronDown className="ml-1 h-4 w-4" />
+        <div className="container mx-auto px-4">
+          <nav className="flex items-center justify-center py-4"> {/* Changed justify-between to justify-center */}      
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-1">
+              <Link href="/" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50">
+                HOME
               </Link>
               
-              {/* Dropdown menu */}
-              {typesDropdownOpen && (
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-red-700 ring-1 ring-black ring-opacity-5 z-50"
-                      onMouseEnter = {handleMouseEnter}
-                      onMouseLeave = {handleMouseLeave}>
-                  <div className="py-1" role="menu" aria-orientation="vertical">
-                    <Link href="/types/plastic-1" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #1
-                    </Link>
-                    <Link href="/types/plastic-2" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #2
-                    </Link>
-                    <Link href="/types/plastic-3" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
-                      Plastic #3
-                    </Link>
+              {/* Types of Plastics dropdown */}
+              <div className="relative" onMouseEnter={() => setTypesDropdownOpen(true)} onMouseLeave={() => setTypesDropdownOpen(false)}>
+                <Link href="/types" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50 flex items-center">
+                  TYPES OF PLASTICS
+                  <ChevronDown className="ml-1 h-4 w-4" />
+                </Link>
+                
+                {/* Dropdown menu with modern styling */}
+                {typesDropdownOpen && (
+                  <div className="absolute left-0 mt-2 w-56 rounded-xl shadow-xl bg-white border border-red-100 overflow-hidden z-50 transition-all duration-300 ease-out transform origin-top-left">
+                    <div className="py-1" role="menu" aria-orientation="vertical">
+                      <Link href="/types/plastic-1" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+                        Plastic #1 - PET
+                      </Link>
+                      <Link href="/types/plastic-2" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+                        Plastic #2 - HDPE
+                      </Link>
+                      <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+                        Plastic #3 - PVC
+                      </Link>
+                      <Link href="/types/plastic-4" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+                        Plastic #4 - LDPE
+                      </Link>
+                      <Link href="/types/plastic-5" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+                        Plastic #5 - PP
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
+              
+              {/* Other main navigation links */}
+              <Link href="/formation" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50">
+                PLASTIC FORMATION
+              </Link>
+              <Link href="/environmental" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50">
+                ENVIRONMENTAL EFFECTS
+              </Link>
+              <Link href="/solutions" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50">
+                SOLUTIONS
+              </Link>
+              <Link href="/citations" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50">
+                CITATIONS
+              </Link>
             </div>
-            
-            {/* Other main navigation links */}
-            <Link href="/formation" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
-              PLASTIC FORMATION
-            </Link>
-            <Link href="/environmental" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
-              ENVIRONMENTAL EFFECTS
-            </Link>
-            <Link href="/solutions" className="px-4 py-2 hover:text-red-600 transition-colors font-medium">
-              APPROACHES & SOLUTIONS
-            </Link>
+          
+          </nav>
+        </div>
+        
+        {/* Mobile Navigation Overlay */}
+        {mobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-white bg-opacity-95 backdrop-blur-md shadow-lg border-t border-red-100 py-4 z-50 animate-fade-in">
+            <div className="container mx-auto px-4 flex flex-col space-y-2">
+              <Link 
+                href="/" 
+                className="px-4 py-3 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                HOME
+              </Link>
+              <Link 
+                href="/types" 
+                className="px-4 py-3 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                TYPES OF PLASTICS
+              </Link>
+              <Link 
+                href="/formation" 
+                className="px-4 py-3 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                PLASTIC FORMATION
+              </Link>
+              <Link 
+                href="/environmental" 
+                className="px-4 py-3 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                ENVIRONMENTAL EFFECTS
+              </Link>
+              <Link 
+                href="/solutions" 
+                className="px-4 py-3 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                SOLUTIONS
+              </Link>
+              <Link 
+                href="/citations" 
+                className="px-4 py-3 hover:bg-red-50 hover:text-red-600 rounded-lg transition-colors"
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                CITATIONS
+              </Link>
+            </div>
           </div>
-        </nav>
+        )}
       </header>
 
       {/* Main content */}
