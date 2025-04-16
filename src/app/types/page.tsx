@@ -1,17 +1,31 @@
 'use client'
 
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { ChevronDown, ArrowRight, Recycle, Info, Leaf, Droplet, Factory } from "lucide-react"
 
 export default function Types() {
   const [scrollY, setScrollY] = useState(0);
   const [typesDropdownOpen, setTypesDropdownOpen] = useState(false);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [activePlastic, setActivePlastic] = useState(1);
   const [isVisible, setIsVisible] = useState({
     hero: false,
     plastics: false
   });
+  const handleMouseEnter = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current); // Cancel any pending close timeout
+    }
+    setTypesDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setTypesDropdownOpen(false);
+    }, 100); // Delay closing by 100ms
+  };
+
 
   // Animation for plastic items appearing
   const [visiblePlastics, setVisiblePlastics] = useState<number[]>([]);
@@ -42,6 +56,7 @@ export default function Types() {
         }, 200 * i);
       }
     };
+    
 
     setTimeout(animatePlastics, 800);
 
@@ -175,7 +190,7 @@ export default function Types() {
             </Link>
             
             {/* Types of Plastics dropdown */}
-            <div className="relative" onMouseEnter={() => setTypesDropdownOpen(true)} onMouseLeave={() => setTypesDropdownOpen(false)}>
+            <div className="relative" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
               <Link href="/types" className="px-4 py-2 hover:text-red-600 transition-colors font-medium flex items-center">
                 TYPES OF PLASTICS
                 <ChevronDown className="ml-1 h-4 w-4" />
@@ -183,7 +198,9 @@ export default function Types() {
               
               {/* Dropdown menu */}
               {typesDropdownOpen && (
-                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-red-700 ring-1 ring-black ring-opacity-5 z-50">
+                <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-red-700 ring-1 ring-black ring-opacity-5 z-50"
+                      onMouseEnter = {handleMouseEnter}
+                      onMouseLeave = {handleMouseLeave}>
                   <div className="py-1" role="menu" aria-orientation="vertical">
                     <Link href="/types/plastic-1" className="block px-4 py-2 text-sm text-white hover:bg-red-800 hover:text-white transition-colors">
                       Plastic #1
