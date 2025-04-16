@@ -8,7 +8,7 @@ import * as THREE from 'three'
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [isVisible, setIsVisible] = useState({
-    hero: false,
+    hero: true, // Set to true by default so it's visible immediately
     types: false,
     manufacturing: false,
     recycling: false
@@ -29,7 +29,7 @@ export default function Home() {
       
       // Check visibility for each section
       setIsVisible({
-        hero: window.scrollY > 50,
+        hero: true, // Always visible
         types: window.scrollY > 300,
         manufacturing: window.scrollY > 700,
         recycling: window.scrollY > 1100
@@ -38,10 +38,10 @@ export default function Home() {
 
     window.addEventListener("scroll", handleScroll);
     
-    // Initialize visibility for first section
-    setTimeout(() => {
-      setIsVisible(prev => ({...prev, hero: true}));
-    }, 300);
+    // Initialize visibility for first section - no longer needed since hero is always visible
+    // setTimeout(() => {
+    //   setIsVisible(prev => ({...prev, hero: true}));
+    // }, 300);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -449,7 +449,7 @@ export default function Home() {
       </header>
 
       {/* Main content */}
-      <main className="flex-1 relative pt-16">
+      <main className="flex-1 relative">  {/* Removed pt-16 padding-top */}
         {/* Background with enhanced design */}
         <div className="fixed inset-0 z-0">
           {/* Grid pattern with particle effect */}
@@ -486,8 +486,8 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Title section with 3D molecule */}
-        <section className="relative z-10 min-h-screen flex items-center">
+        {/* Title section with 3D molecule - Modified to be 100vh for full viewport height */}
+        <section className="relative z-10 min-h-screen h-screen flex items-center">
           <div className="container mx-auto px-6">
             <div className="flex flex-col md:flex-row items-center justify-center gap-6"> {/* Added gap-6 and changed justify-between to justify-center */}
               {/* Text Content */}
@@ -519,7 +519,7 @@ export default function Home() {
               </div>
               
               {/* 3D Molecule Container - Increased size and positioned closer to text */}
-              <div className="w-96 h-96 md:w-144 md:h-144 relative transition-all duration-1000 transform" 
+              <div className="w-96 h-80 md:w-144 md:h-144 relative transition-all duration-1000 transform" 
                   style={{opacity: isVisible.hero ? 1 : 0, transform: isVisible.hero ? 'translateY(0)' : 'translateY(50px)'}}>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div ref={moleculeContainerRef} className="w-full h-full transform scale-110"></div> {/* Added scale-110 to make molecule appear larger */}

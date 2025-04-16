@@ -12,7 +12,7 @@ export default function Types() {
    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activePlastic, setActivePlastic] = useState(1);
   const [isVisible, setIsVisible] = useState({
-    hero: false,
+    hero: true, // Set to true by default so it's visible immediately
     plastics: false
   });
   const handleMouseEnter = () => {
@@ -38,17 +38,17 @@ export default function Types() {
       
       // Check visibility for each section
       setIsVisible({
-        hero: window.scrollY > 50,
+        hero: true, // Always visible
         plastics: window.scrollY > 300
       });
     };
 
     window.addEventListener("scroll", handleScroll);
     
-    // Initialize visibility for first section
-    setTimeout(() => {
-      setIsVisible(prev => ({...prev, hero: true}));
-    }, 300);
+    // Initialize visibility for first section - removed the setTimeout since hero is always visible
+    // setTimeout(() => {
+    //   setIsVisible(prev => ({...prev, hero: true}));
+    // }, 300);
 
     // Staggered animation for plastic items
     const animatePlastics = () => {
@@ -59,8 +59,8 @@ export default function Types() {
       }
     };
     
-
-    setTimeout(animatePlastics, 800);
+    // Start the animation sooner
+    setTimeout(animatePlastics, 300);
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -179,9 +179,7 @@ export default function Types() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 overflow-x-hidden">
       {/* Header with navigation - now sticky with transparency on scroll */}
-      <header className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        scrollY > 50 ? 'bg-white bg-opacity-80 backdrop-blur-md shadow-lg' : 'bg-transparent'
-      }`}>
+      <header className="w-full fixed top-0 z-50 bg-white bg-opacity-90 backdrop-blur-md shadow-lg transition-all duration-300">
         <div className="container mx-auto px-4">
           <nav className="flex items-center justify-center py-4"> {/* Changed justify-between to justify-center */}      
             {/* Desktop Navigation */}
@@ -291,7 +289,7 @@ export default function Types() {
       </header>
 
       {/* Main content */}
-      <main className="flex-1 relative pt-20">
+      <main className="flex-1 relative">  {/* Removed pt-20 padding-top */}
         {/* Background with overlay */}
         <div className="fixed inset-0 z-0">
           {/* Grid overlay */}
@@ -301,9 +299,9 @@ export default function Types() {
           <div className="absolute inset-0 bg-gradient-to-r from-white to-white"></div>
         </div>
 
-        {/* Hero Section */}
-        <section className="relative z-10 py-20 bg-gradient-to-r from-red-500 to-red-600 text-white">
-          <div className="container mx-auto px-6">
+        {/* Hero Section - Modified to be full viewport height */}
+        <section className="relative z-10 min-h-screen flex flex-col justify-center bg-gradient-to-r from-red-500 to-red-600 text-white">
+          <div className="container mx-auto px-6 py-16">  {/* Added py-16 for vertical padding */}
             <div className="max-w-4xl mx-auto text-center transition-all duration-1000 transform"
                  style={{opacity: isVisible.hero ? 1 : 0, transform: isVisible.hero ? 'translateY(0)' : 'translateY(50px)'}}>
               <h1 className="text-5xl md:text-6xl font-bold mb-6">Types of Plastics</h1>
@@ -352,6 +350,8 @@ export default function Types() {
               </div>
             </div>
           </div>
+          
+       
           
           {/* Decorative elements */}
           <div className="absolute bottom-0 left-0 w-full overflow-hidden">
@@ -520,6 +520,11 @@ export default function Types() {
           to { transform: translateY(0); opacity: 1; }
         }
         
+        @keyframes bounce-slow {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
+        }
+        
         .bg-grid-pattern {
           background-image: linear-gradient(rgba(220, 38, 38, 0.05) 1px, transparent 1px),
                             linear-gradient(90deg, rgba(220, 38, 38, 0.05) 1px, transparent 1px);
@@ -528,6 +533,10 @@ export default function Types() {
         
         .animate-spin-slow {
           animation: spin-slow 15s linear infinite;
+        }
+
+        .animate-bounce-slow {
+          animation: bounce-slow 2s ease-in-out infinite;
         }
         
         .shadow-glow-red {
@@ -540,6 +549,28 @@ export default function Types() {
         
         .plastic-number-animation {
           animation: pulse-scale 4s ease-in-out infinite;
+        }
+        
+        html {
+          scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 12px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f1f1;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: rgba(220, 38, 38, 0.6);
+          border-radius: 6px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: rgba(220, 38, 38, 0.8);
         }
       `}</style>
     </div>
