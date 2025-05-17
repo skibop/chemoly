@@ -208,12 +208,6 @@ export default function Types() {
                       <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
                         Plastic #3 - PVC
                       </Link>
-                      <Link href="/types/plastic-4" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Plastic #4 - LDPE
-                      </Link>
-                      <Link href="/types/plastic-5" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Plastic #5 - PP
-                      </Link>
                     </div>
                   </div>
                 )}
