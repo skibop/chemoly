@@ -7,6 +7,7 @@ import * as THREE from 'three'
 
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const [isVisible, setIsVisible] = useState({
     hero: true, // Set to true by default so it's visible immediately
     types: false,
@@ -22,7 +23,18 @@ export default function Home() {
   
   // Ref for the molecule container with proper typing
   const moleculeContainerRef = useRef<HTMLDivElement | null>(null);
-  
+  const handleMouseEnterDropdown = () => {
+    if (closeTimeoutRef.current) {
+      clearTimeout(closeTimeoutRef.current); // Cancel any pending close timeout
+    }
+    setTypesDropdownOpen(true);
+  };
+
+  const handleMouseLeaveDropdown = () => {
+    closeTimeoutRef.current = setTimeout(() => {
+      setTypesDropdownOpen(false);
+    }, 100); // Delay closing by 100ms
+  };
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
@@ -342,7 +354,7 @@ export default function Home() {
               </Link>
               
               {/* Types of Plastics dropdown */}
-              <div className="relative" onMouseEnter={() => setTypesDropdownOpen(true)} onMouseLeave={() => setTypesDropdownOpen(false)}>
+              <div className="relative" onMouseEnter={handleMouseEnterDropdown} onMouseLeave={handleMouseLeaveDropdown}>
                 <Link href="/types" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50 flex items-center">
                   TYPES OF PLASTICS
                   <ChevronDown className="ml-1 h-4 w-4" />
