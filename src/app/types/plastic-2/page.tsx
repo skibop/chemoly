@@ -181,8 +181,8 @@ export default function Plastic2() {
             {/* Header */}
             <header className="w-full bg-red-600 text-white pt-32 pb-16 shadow-md">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-6xl font-bold">PET</h1>
-                     <p className="text-xl mt-4">Polyethylene Terephthalate</p>
+                    <h1 className="text-6xl font-bold">HDPE</h1>
+                     <p className="text-xl mt-4">High-Density Polyethylene</p>
                 </div>
             </header>
 
@@ -196,8 +196,8 @@ export default function Plastic2() {
                         </h2>
                         <div className="text-lg leading-relaxed text-center px-8 pb-8 bg-gray-100 text-white bg-red-600">
                             <p>
-                                Polyethylene Terephthalate (PET) is a polymer formed by the condensation reaction of ethylene glycol and terephthalic acid. 
-                                Its chemical structure consists of repeating units of ester groups, making it lightweight, strong, and transparent.
+                            High-Density Polyethylene (HDPE) is a polymer formed through the polymerization of ethylene monomers under high pressure and temperature with catalysts. 
+                            Its chemical structure consists of repeating CH₂-CH₂ units in a linear chain with minimal branching, making it extremely strong, chemical-resistant, and durable.
                             </p>
                         </div>
                     </div>
@@ -281,7 +281,7 @@ export default function Plastic2() {
               </h2>
               <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                 <p>
-                  PET is generally considered safe for single use but has key environmental and health concerns.
+                HDPE is generally considered one of the safest plastics but still has environmental and potential health concerns.
                 </p>
               </div>
             </div>
@@ -297,7 +297,7 @@ export default function Plastic2() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Health Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                  Repeated use may lead to leaching of harmful chemicals such as antimony, a catalyst used in PET production. Single-use is generally considered safe but reuse can increase chemical migration.
+                HDPE is considered food-safe and FDA-approved for food contact. However, prolonged UV exposure can lead to degradation and potential release of microplastics. Some additives used in production may cause allergic reactions in sensitive individuals.
                 </p>
               </div>
               
@@ -312,7 +312,7 @@ export default function Plastic2() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Environmental Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                  Production is energy-intensive and contributes to greenhouse gas emissions. Despite recyclability, many PET containers end up in landfills or oceans where they persist for hundreds of years.
+                Production requires significant energy from fossil fuels. While highly recyclable, HDPE products often have long service lives in landfills where they can take 450+ years to decompose. Manufacturing releases greenhouse gases contributing to climate change.
                 </p>
               </div>
             </div>
@@ -324,7 +324,7 @@ export default function Plastic2() {
                   </h2>
                   <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                     <p>
-                      PET is highly recyclable but faces significant processing challenges and environmental consequences.
+                    HDPE is one of the most widely recycled plastics with excellent processing capabilities and minimal quality loss.
                     </p>
                   </div>
                 </div>
@@ -375,7 +375,7 @@ export default function Plastic2() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Collection & Sorting</h3>
                         <p className="mt-4 text-gray-700">
-                          PET bottles and containers are collected, sorted by color and quality, then cleaned to remove labels, caps, and contaminants.
+                        HDPE containers like milk jugs, detergent bottles, and shopping bags are collected through curbside programs, sorted by color and resin type, then cleaned of labels and contaminants.
                         </p>
                       </div>
                       
@@ -383,7 +383,7 @@ export default function Plastic2() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">2</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Processing</h3>
                         <p className="mt-4 text-gray-700">
-                          Clean PET is shredded into flakes, washed again, dried, and then either melted for direct molding or processed into pellets for future use.
+                        Clean HDPE is shredded into flakes, thoroughly washed, dried, and melted down. The plastic maintains excellent quality through multiple recycling cycles due to its stable molecular structure.
                         </p>
                       </div>
                       
@@ -391,7 +391,7 @@ export default function Plastic2() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">3</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Remanufacturing</h3>
                         <p className="mt-4 text-gray-700">
-                          Recycled PET (rPET) becomes new bottles, packaging, textiles (polyester), industrial strapping, and construction materials.
+                        Recycled HDPE (rHDPE) becomes new bottles, plastic lumber for decks and furniture, pipes, playground equipment, automotive parts, and various durable goods.
                         </p>
                       </div>
                     </div>
@@ -400,7 +400,7 @@ export default function Plastic2() {
                       <div className="flex items-start">
                         <Info className="w-6 h-6 text-red-600 mt-1 mr-3 flex-shrink-0" />
                         <p className="text-gray-700">
-                          Each recycling cycle typically degrades PET quality, limiting how many times it can be recycled into the same product. Most PET is "downcycled" into lower-grade products after its first recycling.
+                        Each recycling cycle typically degrades HDPE quality, limiting how many times it can be recycled into the same product. Most HDPE is "downcycled" into lower-grade products after its first recycling.
                         </p>
                       </div>
                     </div>
@@ -420,13 +420,13 @@ export default function Plastic2() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>PET microplastics have been found in water bodies worldwide</span>
+                              <span>HDPE microplastics have been found in water bodies worldwide</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Can take 450+ years to completely degrade in marine environments</span>
+                              <span>Can take 400+ years to completely degrade in marine environments</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
@@ -449,13 +449,13 @@ export default function Plastic2() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Manufacturing 1kg of PET produces ~2.3kg of CO₂ emissions</span>
+                              <span>Manufacturing 1kg of HDPE produces ~1.9kg of CO₂ emissions</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Using recycled PET reduces energy consumption by ~60% compared to virgin plastic</span>
+                              <span>Using recycled HDPE reduces energy consumption by ~70% compared to virgin plastic</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
@@ -475,15 +475,15 @@ export default function Plastic2() {
                       <div className="p-4">
                         <div className="flex flex-col md:flex-row justify-between gap-4">
                           <div className="text-center pl-16">
-                            <div className="text-3xl font-bold text-red-600">29%</div>
+                            <div className="text-3xl font-bold text-red-600">31%</div>
                             <p className="text-sm text-gray-600">Global Collection Rate</p>
                           </div>
                           <div className="text-center">
-                            <div className="text-3xl font-bold text-red-600">~500B</div>
-                            <p className="text-sm text-gray-600">PET Bottles Produced Annually</p>
+                            <div className="text-3xl font-bold text-red-600">~40B</div>
+                            <p className="text-sm text-gray-600">HDPE Containers Produced Annually</p>
                           </div>
                           <div className="text-center pr-16">
-                            <div className="text-3xl font-bold text-red-600">20%</div>
+                            <div className="text-3xl font-bold text-red-600">28%</div>
                             <p className="text-sm text-gray-600">Actually Recycled</p>
                           </div>
                         </div>
@@ -497,8 +497,7 @@ export default function Plastic2() {
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
                         <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Chemical Recycling</h3>
                         <p className="text-gray-700 mb-4">
-                          Breaks down PET into its original chemical components through processes like glycolysis, methanolysis, and hydrolysis, allowing for unlimited recycling without quality degradation.
-                        </p>
+                        Breaks down HDPE through pyrolysis and depolymerization processes, converting it back to oil or chemicals for producing new plastics with virgin-like properties.                        </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
                           <span className="text-sm font-medium text-red-600">Promising technology</span>
@@ -506,13 +505,13 @@ export default function Plastic2() {
                       </div>
                       
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
-                        <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Enzymatic Recycling</h3>
+                        <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Advanced Sorting</h3>
                         <p className="text-gray-700 mb-4">
-                          Uses specialized enzymes to break down PET at a molecular level under mild conditions, consuming less energy and allowing for true circular recycling of plastic materials.
+                        New AI-powered optical sorting and density separation technologies can better separate HDPE from other plastics, improving recycling efficiency and quality.
                         </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
-                          <span className="text-sm font-medium text-red-600">Eco-friendly approach</span>
+                          <span className="text-sm font-medium text-red-600">High-efficiency approach</span>
                         </div>
                       </div>
                     </div>
@@ -531,8 +530,7 @@ export default function Plastic2() {
                             <div>
                               <h5 className="font-medium text-gray-900">Mechanical Recycling Dominance</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Traditional shredding and melting remains the most common method, with limitations on recycling cycles.
-                              </p>
+                              Traditional washing, shredding and melting remains the most common method, with good quality retention for several cycles.                              </p>
                             </div>
                           </div>
                           
@@ -541,10 +539,9 @@ export default function Plastic2() {
                               5yr
                             </div>
                             <div>
-                              <h5 className="font-medium text-gray-900">Chemical Recycling Scaling</h5>
+                              <h5 className="font-medium text-gray-900">Enhanced Sorting Systems</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Industrial-scale chemical recycling plants becoming more common, improving quality of recycled PET.
-                              </p>
+                              Advanced AI and spectroscopic sorting technologies improving HDPE recovery rates from mixed plastic waste streams.                              </p>
                             </div>
                           </div>
                           
@@ -553,10 +550,9 @@ export default function Plastic2() {
                               10yr
                             </div>
                             <div>
-                              <h5 className="font-medium text-gray-900">Enzymatic Breakthrough</h5>
+                              <h5 className="font-medium text-gray-900">Chemical Recycling Mainstream</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Widespread adoption of enzymatic PET recycling, enabling true plastic circularity.
-                              </p>
+                              Commercial-scale pyrolysis and depolymerization enabling unlimited recycling cycles for HDPE.                              </p>
                             </div>
                           </div>
                         </div>
@@ -573,7 +569,7 @@ export default function Plastic2() {
                   </h2>
                   <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                     <p>
-                      PET has limited biodegradability under typical environmental conditions, requiring specific treatments for decomposition.
+                    HDPE has extremely limited biodegradability under natural conditions, requiring specific industrial treatments for decomposition.
                     </p>
                   </div>
                 </div>
@@ -598,23 +594,23 @@ export default function Plastic2() {
                           <div className="relative">
                             <div className="flex items-center justify-between mb-3">
                               <span className="text-sm font-medium text-gray-600">Marine Environment</span>
-                              <span className="text-sm font-bold text-red-600">450+ years</span>
+                              <span className="text-sm font-bold text-red-600">400+ years</span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-3">
-                              <div className="bg-red-500 h-3 rounded-full" style={{ width: '95%' }}></div>
+                              <div className="bg-red-500 h-3 rounded-full" style={{ width: '94%' }}></div>
                             </div>
-                            <p className="text-xs text-gray-600 mt-2">Cold temperatures and UV exposure slow breakdown</p>
+                            <p className="text-xs text-gray-600 mt-2">Salt water and UV exposure cause fragmentation, not breakdown</p>
                           </div>
                           
                           <div className="relative">
                             <div className="flex items-center justify-between mb-3">
                               <span className="text-sm font-medium text-gray-600">Landfill Environment</span>
-                              <span className="text-sm font-bold text-red-600">700+ years</span>
+                              <span className="text-sm font-bold text-red-600">600+ years</span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-3">
-                              <div className="bg-red-600 h-3 rounded-full" style={{ width: '98%' }}></div>
+                              <div className="bg-red-600 h-3 rounded-full" style={{ width: '97%' }}></div>
                             </div>
-                            <p className="text-xs text-gray-600 mt-2">Anaerobic conditions prevent standard degradation</p>
+                            <p className="text-xs text-gray-600 mt-2">Low oxygen conditions prevent microbial degradation</p>
                           </div>
                           
                           <div className="relative">
@@ -625,7 +621,7 @@ export default function Plastic2() {
                             <div className="w-full bg-gray-200 rounded-full h-3">
                               <div className="bg-gray-400 h-3 rounded-full" style={{ width: '100%' }}></div>
                             </div>
-                            <p className="text-xs text-gray-600 mt-2">Standard PET remains unchanged in composting</p>
+                            <p className="text-xs text-gray-600 mt-2">HDPE is chemically inert and resists composting</p>
                           </div>
                         </div>
                         
@@ -635,8 +631,7 @@ export default function Plastic2() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <p className="text-sm text-gray-700">
-                              PET's crystalline structure makes it highly resistant to natural decomposition processes.
-                            </p>
+                            HDPE's linear polymer structure and high molecular weight make it extremely resistant to biodegradation.                            </p>
                           </div>
                         </div>
                       </div>
@@ -666,10 +661,9 @@ export default function Plastic2() {
                                   1
                                 </div>
                                 <div className="flex-grow">
-                                  <h4 className="font-medium text-gray-900">Enzymatic Treatment</h4>
+                                  <h4 className="font-medium text-gray-900">Thermal Oxidation</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    Specialized enzymes like PETase can break down PET in laboratory conditions within weeks.
-                                  </p>
+                                  High-temperature processing (200-300°C) with oxygen can break down HDPE polymer chains over weeks.                                  </p>
                                 </div>
                               </div>
                               
@@ -678,11 +672,11 @@ export default function Plastic2() {
                                   2
                                 </div>
                                 <div className="flex-grow">
-                                  <h4 className="font-medium text-gray-900">Thermal Treatment</h4>
+                                  <h4 className="font-medium text-gray-900">UV Photo-degradation</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    High-temperature industrial composting (60-70°C) can accelerate breakdown over months.
+                                  Intense UV radiation combined with oxygen can fragment HDPE over months to years.
                                   </p>
-                                </div>
+                                  </div>
                               </div>
                               
                               <div className="flex items-start">
@@ -692,7 +686,7 @@ export default function Plastic2() {
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Biodegradable Additives</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    Modified PET with pro-degradant additives can reduce decomposition time to 3-5 years.
+                                  Pro-oxidant additives can reduce HDPE degradation time to 2-5 years under ideal conditions.
                                   </p>
                                 </div>
                               </div>
@@ -706,8 +700,8 @@ export default function Plastic2() {
                           </div>
                           <div className="p-4">
                             <p className="text-sm text-gray-700">
-                              Scientists have discovered bacteria that can naturally consume PET, offering hope for biological 
-                              solutions to plastic waste. Research into engineered organisms continues to show promising results.
+                            Research into wax moth larvae and certain bacteria shows potential for biological HDPE degradation. 
+                            However, these processes are still experimental and not yet commercially viable.
                             </p>
                           </div>
                         </div>
@@ -723,22 +717,22 @@ export default function Plastic2() {
                     <div className="p-6">
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                         <div className="bg-red-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-red-600 mb-2">2-6</div>
+                          <div className="text-2xl font-bold text-red-600 mb-2">2-8</div>
                           <div className="text-xs text-gray-600 mb-1">WEEKS</div>
-                          <div className="text-sm font-medium text-gray-800">Enzymatic Lab</div>
+                          <div className="text-sm font-medium text-gray-800">Thermal Oxidation</div>
                         </div>
                         <div className="bg-orange-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-orange-600 mb-2">3-5</div>
+                          <div className="text-2xl font-bold text-orange-600 mb-2">2-5</div>
                           <div className="text-xs text-gray-600 mb-1">YEARS</div>
                           <div className="text-sm font-medium text-gray-800">Modified PET</div>
                         </div>
                         <div className="bg-red-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-red-600 mb-2">450+</div>
+                          <div className="text-2xl font-bold text-red-600 mb-2">400+</div>
                           <div className="text-xs text-gray-600 mb-1">YEARS</div>
                           <div className="text-sm font-medium text-gray-800">Ocean Environment</div>
                         </div>
                         <div className="bg-gray-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-gray-600 mb-2">700+</div>
+                          <div className="text-2xl font-bold text-gray-600 mb-2">600+</div>
                           <div className="text-xs text-gray-600 mb-1">YEARS</div>
                           <div className="text-sm font-medium text-gray-800">Landfill</div>
                         </div>
