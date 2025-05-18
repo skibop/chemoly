@@ -89,7 +89,9 @@ export default function Solutions() {
         "Potential industry pushback could delay or weaken implementation",
         "Limited international reach—U.S.-based strategy may not address global plastic flows"
       ],
-      chemicalProcess: "Involves various chemical and mechanical processes across multiple initiatives rather than a single chemical reaction."
+      chemicalProcess: "Involves various chemical and mechanical processes across multiple initiatives rather than a single chemical reaction.",
+      whyBest: [],
+      limitations: []
     },
     nasa: {
       id: "nasa",
@@ -120,7 +122,9 @@ export default function Solutions() {
         "Data interpretation may be limited by ocean conditions like waves or weather",
         "Not a direct cleanup tool—must be used in conjunction with active removal strategies"
       ],
-      chemicalProcess: "No chemical transformation occurs in this detection approach. It uses remote sensing technology rather than chemical reactions."
+      chemicalProcess: "No chemical transformation occurs in this detection approach. It uses remote sensing technology rather than chemical reactions.",
+      whyBest: [],
+      limitations: []
     },
     oceancleaup: {
       id: "oceancleaup",
@@ -151,7 +155,9 @@ export default function Solutions() {
         "System durability and maintenance in open ocean can be challenging",
         "Still needs support from governments and donors to scale effectively"
       ],
-      chemicalProcess: "This is a physical collection method rather than a chemical process. Recovered plastics may later undergo various recycling processes once brought to shore."
+      chemicalProcess: "This is a physical collection method rather than a chemical process. Recovered plastics may later undergo various recycling processes once brought to shore.",
+      whyBest: [],
+      limitations: []
     },
     carbios: {
       id: "carbios",
@@ -245,7 +251,9 @@ export default function Solutions() {
         "Bioplastics need specific composting or disposal conditions to break down properly",
         "Still in the early stages of global scalability and awareness"
       ],
-      chemicalProcess: "This approach uses natural polysaccharides (primarily carrageenan) from seaweed rather than petroleum-derived polymers. The material biodegrades naturally through hydrolysis when exposed to moisture."
+      chemicalProcess: "This approach uses natural polysaccharides (primarily carrageenan) from seaweed rather than petroleum-derived polymers. The material biodegrades naturally through hydrolysis when exposed to moisture.",
+      whyBest: [],
+      limitations: []
     },
     samsara: {
       id: "samsara",
@@ -275,7 +283,9 @@ export default function Solutions() {
         "Economic viability depends on market demand and regulatory support",
         "Process efficiency may vary depending on plastic composition and contamination"
       ],
-      chemicalProcess: "Samsara Eco has developed enzymes that depolymerize nylon 6 into its monomer: Nylon 6 + H₂O → ε-Caprolactam. This process enables the recycling of nylon 6 by breaking it down into ε-caprolactam, which can be repolymerized into new nylon products."
+      chemicalProcess: "Samsara Eco has developed enzymes that depolymerize nylon 6 into its monomer: Nylon 6 + H₂O → ε-Caprolactam. This process enables the recycling of nylon 6 by breaking it down into ε-caprolactam, which can be repolymerized into new nylon products.",
+      whyBest: [],
+      limitations: []
     },
     polymateria: {
       id: "polymateria",
@@ -305,7 +315,9 @@ export default function Solutions() {
         "Potential concerns about the impact on recycling systems if not properly managed",
         "May have higher initial costs compared to conventional plastics"
       ],
-      chemicalProcess: "Polymateria's biotransformation technology involves a two-phase process: 1) Oxidative Degradation - The proprietary additive initiates oxidation, reducing the polymer's molecular weight to approximately 600–1000 Da, forming a waxy substance. 2) Biodegradation - Microorganisms consume the waxy substance, converting it into carbon dioxide, water, and biomass. This approach ensures complete biodegradation without leaving microplastics."
+      chemicalProcess: "Polymateria's biotransformation technology involves a two-phase process: 1) Oxidative Degradation - The proprietary additive initiates oxidation, reducing the polymer's molecular weight to approximately 600–1000 Da, forming a waxy substance. 2) Biodegradation - Microorganisms consume the waxy substance, converting it into carbon dioxide, water, and biomass. This approach ensures complete biodegradation without leaving microplastics.",
+      whyBest: [],
+      limitations: []
     },
     ferreira: {
       id: "ferreira",
@@ -335,7 +347,9 @@ export default function Solutions() {
         "Management and disposal of collected microplastics need to be addressed",
         "May be cost-prohibitive for widespread implementation"
       ],
-      chemicalProcess: "Fionn Ferreira developed a method using ferrofluids to remove microplastics from water: 1) Hydrophobic Interaction: The ferrofluid, composed of magnetic nanoparticles, binds to microplastics through hydrophobic interactions. 2) Magnetic Separation: A magnet is then used to extract the microplastic-bound ferrofluid from the water. This technique effectively removes microplastics without chemical alteration."
+      chemicalProcess: "Fionn Ferreira developed a method using ferrofluids to remove microplastics from water: 1) Hydrophobic Interaction: The ferrofluid, composed of magnetic nanoparticles, binds to microplastics through hydrophobic interactions. 2) Magnetic Separation: A magnet is then used to extract the microplastic-bound ferrofluid from the water. This technique effectively removes microplastics without chemical alteration.",
+      whyBest: [],
+      limitations: []
     },
     japan: {
       id: "japan",
@@ -365,7 +379,9 @@ export default function Solutions() {
         "Requires specific types of plastics and pre-treatment processes",
         "Economic feasibility depends on advancements in catalyst development and system design"
       ],
-      chemicalProcess: "Using a carbon nitride/nickel phosphide (CNx|Ni₂P) photocatalyst under alkaline conditions: PET + H₂O + Light → H₂ + CO₂ + Organic Acids (e.g., Formic Acid, Acetic Acid). This photoreforming process converts plastic waste into hydrogen fuel and valuable chemicals using solar energy."
+      chemicalProcess: "Using a carbon nitride/nickel phosphide (CNx|Ni₂P) photocatalyst under alkaline conditions: PET + H₂O + Light → H₂ + CO₂ + Organic Acids (e.g., Formic Acid, Acetic Acid). This photoreforming process converts plastic waste into hydrogen fuel and valuable chemicals using solar energy.",
+      whyBest: [],
+      limitations: []
     },
     lyondell: {
       id: "lyondell",
@@ -395,7 +411,9 @@ export default function Solutions() {
         "Public opposition due to past pollution violations at the site",
         "Economic viability depends on market demand for recycled feedstock"
       ],
-      chemicalProcess: "LyondellBasell's MoReTec technology employs pyrolysis to convert plastic waste into feedstock: Plastic Waste → Pyrolysis Oil + Pyrolysis Gas. The pyrolysis oil can be used to produce new plastics, while the gas can be utilized as an energy source or further processed."
+      chemicalProcess: "LyondellBasell's MoReTec technology employs pyrolysis to convert plastic waste into feedstock: Plastic Waste → Pyrolysis Oil + Pyrolysis Gas. The pyrolysis oil can be used to produce new plastics, while the gas can be utilized as an energy source or further processed.",
+      whyBest: [],
+      limitations: []
     },
     congo: {
       id: "congo",
@@ -425,7 +443,9 @@ export default function Solutions() {
         "Initial capital investment is substantial, and economic viability depends on market demand for byproducts",
         "Potential environmental concerns related to the handling and disposal of byproducts like char"
       ],
-      chemicalProcess: "The Kinshasa Thermal Power Station plans to convert plastic waste into energy and byproducts through pyrolysis: Plastic Waste → Diesel Fuel + Industrial Lubricants + Char (Solid Carbon) + Syngas. This process involves heating plastic waste above 400°C in an oxygen-deprived environment, breaking down polymers into usable fuels and materials."
+      chemicalProcess: "The Kinshasa Thermal Power Station plans to convert plastic waste into energy and byproducts through pyrolysis: Plastic Waste → Diesel Fuel + Industrial Lubricants + Char (Solid Carbon) + Syngas. This process involves heating plastic waste above 400°C in an oxygen-deprived environment, breaking down polymers into usable fuels and materials.",
+      whyBest: [],
+      limitations: []
     }
   };
 
@@ -729,7 +749,7 @@ export default function Solutions() {
                       </div>
                       
                       {/* Special Carbios Section */}
-                      {solution.id === 'carbios' && solution.whyBest && (
+                      {solution.id === 'carbios' && solution.whyBest.length > 0 && (
                         <div className="mb-8 bg-yellow-50 p-6 rounded-lg border border-yellow-200">
                           <h3 className="text-xl font-bold mb-4 text-yellow-700 flex items-center">
                             <Star size={20} className="mr-2 text-yellow-500" />
@@ -792,7 +812,7 @@ export default function Solutions() {
                       </div>
                       
                       {/* Special Carbios Limitations Section */}
-                      {solution.id === 'carbios' && solution.limitations && (
+                      {solution.id === 'carbios' && solution.limitations.length > 0 && (
                         <div className="mt-8 bg-red-50 p-6 rounded-lg border border-red-200">
                           <h3 className="text-xl font-bold mb-4 text-red-700 flex items-center">
                             <Info size={20} className="mr-2 text-red-500" />
