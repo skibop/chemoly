@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import { ChevronDown, ArrowRight, Recycle, Info, Leaf, Droplet, Factory } from "lucide-react"
 
-export default function Plastic1() {
+export default function Plastic3() {
   const [scrollY, setScrollY] = useState(0);
   const [typesDropdownOpen, setTypesDropdownOpen] = useState(false);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
