@@ -15,14 +15,14 @@ export default function Types() {
     hero: true, // Set to true by default so it's visible immediately
     plastics: false
   });
-  const handleMouseEnter = () => {
+  const handleMouseEnterDropdown = () => {
     if (closeTimeoutRef.current) {
       clearTimeout(closeTimeoutRef.current); // Cancel any pending close timeout
     }
     setTypesDropdownOpen(true);
   };
 
-  const handleMouseLeave = () => {
+  const handleMouseLeaveDropdown = () => {
     closeTimeoutRef.current = setTimeout(() => {
       setTypesDropdownOpen(false);
     }, 100); // Delay closing by 100ms
@@ -189,7 +189,7 @@ export default function Types() {
               </Link>
               
               {/* Types of Plastics dropdown */}
-              <div className="relative" onMouseEnter={() => setTypesDropdownOpen(true)} onMouseLeave={() => setTypesDropdownOpen(false)}>
+              <div className="relative" onMouseEnter={handleMouseEnterDropdown} onMouseLeave={handleMouseLeaveDropdown}>
                 <Link href="/types" className="px-4 py-2 hover:text-red-600 transition-colors font-medium rounded-md hover:bg-red-50 flex items-center">
                   TYPES OF PLASTICS
                   <ChevronDown className="ml-1 h-4 w-4" />
@@ -207,12 +207,6 @@ export default function Types() {
                       </Link>
                       <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
                         Plastic #3 - PVC
-                      </Link>
-                      <Link href="/types/plastic-4" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Plastic #4 - LDPE
-                      </Link>
-                      <Link href="/types/plastic-5" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Plastic #5 - PP
                       </Link>
                     </div>
                   </div>

@@ -27,4 +27,8 @@ module.exports = {
       '@typescript-eslint/no-empty-object-type': 'off', // Disable the no-empty-object-type rule
     },
   };
+<<<<<<< HEAD
   
+=======
+  
+>>>>>>> c2210c780e2a208779016f8aa10e122d1efb5fc9
