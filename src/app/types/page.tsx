@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react"
 import { ChevronDown, Recycle, Info, Leaf, Droplet, Factory } from "lucide-react"
 
 export default function Types() {
-  const [scrollY, setScrollY] = useState(0);
+  const [_scrollY, setScrollY] = useState(0);
   const [typesDropdownOpen, setTypesDropdownOpen] = useState(false);
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null);
    // Mobile menu state
