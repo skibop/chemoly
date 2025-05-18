@@ -1,6 +1,10 @@
 [build]
   command = "npm ci --legacy-peer-deps && npm run build"
   publish = "out"
+  image = "focal"
 
 [build.environment]
   NODE_VERSION = "20"
+  PYTHON_VERSION = "3.11"
+  RUBY_VERSION = "3.2.2"
+  GO_VERSION = "1.21"
