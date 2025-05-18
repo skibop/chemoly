@@ -21,7 +21,7 @@ module.exports = {
     rules: {
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/explicit-module-boundary-types': 'off',
-      '@typescript-eslint/no-unused-vars': 'off',  // global off, can be kept or removed
+      '@typescript-eslint/no-unused-vars': 'warn',  // global off, can be kept or removed
       '@typescript-eslint/no-explicit-any': 'off',
       'react/no-unescaped-entities': 'off',
       'import/no-unresolved': 'off',
@@ -31,7 +31,7 @@ module.exports = {
       {
         files: ['src/app/page.tsx', 'src/app/types/page.tsx'],
         rules: {
-          '@typescript-eslint/no-unused-vars': 'off',
+          '@typescript-eslint/no-unused-vars': 'warn',
         },
       },
     ],
