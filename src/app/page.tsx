@@ -519,7 +519,7 @@ export default function Home() {
               </div>
               
               {/* 3D Molecule Container - Increased size and positioned closer to text */}
-              <div className="w-96 h-80 md:w-144 md:h-144 relative transition-all duration-1000 transform" 
+              <div className="w-80 h-80 md:w-144 md:h-144 relative transition-all duration-1000 transform" 
                   style={{opacity: isVisible.hero ? 1 : 0, transform: isVisible.hero ? 'translateY(0)' : 'translateY(50px)'}}>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div ref={moleculeContainerRef} className="w-full h-full transform scale-110"></div> {/* Added scale-110 to make molecule appear larger */}
