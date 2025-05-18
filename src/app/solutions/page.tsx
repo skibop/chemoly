@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
-import { ChevronDown, MapPin, ArrowRight, Recycle, Info, Leaf, Droplet, Factory, Globe, Menu, X } from "lucide-react"
+import { ChevronDown, MapPin, ArrowRight, Recycle, Info, Leaf, Droplet, Factory, Globe, Menu, X, Zap, FlaskRound, Magnet, Star } from "lucide-react"
 
 export default function Solutions() {
   const [scrollY, setScrollY] = useState(0);
@@ -60,8 +60,8 @@ export default function Solutions() {
     epa: {
       id: "epa",
       name: "EPA's Approach to Plastic Pollution",
-      country: "United States",
-      coordinates: { x: 25, y: 38 },
+      country: "United States (EPA)",
+      coordinates: { x: 27, y: 32 },
       color: "bg-blue-600",
       textColor: "text-white",
       icon: <Factory size={24} />,
@@ -88,13 +88,14 @@ export default function Solutions() {
         "Voluntary elements may not lead to consistent national results",
         "Potential industry pushback could delay or weaken implementation",
         "Limited international reach—U.S.-based strategy may not address global plastic flows"
-      ]
+      ],
+      chemicalProcess: "Involves various chemical and mechanical processes across multiple initiatives rather than a single chemical reaction."
     },
     nasa: {
       id: "nasa",
       name: "NASA: Detecting Concentrations of Ocean Plastic",
-      country: "United States",
-      coordinates: { x: 23, y: 39 },
+      country: "United States (NASA)",
+      coordinates: { x: 26, y: 38 },
       color: "bg-blue-500",
       textColor: "text-white",
       icon: <Globe size={24} />,
@@ -118,13 +119,14 @@ export default function Solutions() {
         "Detects surface-level plastics only, not submerged or microplastic particles",
         "Data interpretation may be limited by ocean conditions like waves or weather",
         "Not a direct cleanup tool—must be used in conjunction with active removal strategies"
-      ]
+      ],
+      chemicalProcess: "No chemical transformation occurs in this detection approach. It uses remote sensing technology rather than chemical reactions."
     },
     oceancleaup: {
       id: "oceancleaup",
       name: "The Ocean Cleanup",
       country: "Netherlands",
-      coordinates: { x: 48, y: 35 },
+      coordinates: { x: 52, y: 24 },
       color: "bg-orange-500",
       textColor: "text-white",
       icon: <Droplet size={24} />,
@@ -148,13 +150,14 @@ export default function Solutions() {
         "Slow process—collection is limited by passive movement and ocean conditions",
         "System durability and maintenance in open ocean can be challenging",
         "Still needs support from governments and donors to scale effectively"
-      ]
+      ],
+      chemicalProcess: "This is a physical collection method rather than a chemical process. Recovered plastics may later undergo various recycling processes once brought to shore."
     },
     carbios: {
       id: "carbios",
-      name: "Carbios: Enzymatic Recycling",
+      name: "⭐ Carbios: Enzymatic Recycling",
       country: "France",
-      coordinates: { x: 47, y: 36 },
+      coordinates: { x: 50, y: 28 },
       color: "bg-blue-400",
       textColor: "text-white",
       icon: <Recycle size={24} />,
@@ -170,20 +173,55 @@ export default function Solutions() {
         "Enables true circular recycling—breaking plastics back to raw components",
         "Works even on contaminated or mixed plastic waste",
         "Reduces the need for virgin plastic production from fossil fuels",
-        "Potential to recycle repeatedly without degradation of material quality"
+        "Potential to recycle repeatedly without degradation of material quality",
+        "Demonstration plant is operational with a full industrial plant expected by 2025"
       ],
       cons: [
         "Currently limited to specific plastic types, such as PET",
         "Scaling the process is cost-intensive and technologically complex",
         "Energy and enzyme production costs could limit affordability",
-        "Industrial adoption requires regulatory support and market incentives"
+        "Industrial adoption requires regulatory support and market incentives",
+        "Doesn't address plastic waste already in the environment"
+      ],
+      chemicalProcess: "Carbios utilizes a proprietary enzyme to depolymerize polyethylene terephthalate (PET) into its monomers: PET + H₂O → Terephthalic Acid (TPA) + Ethylene Glycol (EG). This enzymatic hydrolysis breaks the ester bonds in PET, yielding TPA and EG, which can be purified and repolymerized into new PET without quality loss.",
+      whyBest: [
+        {
+          title: "True Circularity",
+          description: "Unlike mechanical recycling, which downgrades plastic quality, Carbios breaks PET into its original monomers, enabling endless high-quality recycling. This is the holy grail of recycling: materials that retain value across cycles."
+        },
+        {
+          title: "Solves Contamination Issues",
+          description: "Carbios's enzymatic process works even with dirty or mixed plastic waste, where mechanical systems fail. That's a major bottleneck in current systems."
+        },
+        {
+          title: "Reduces Dependency on Virgin Plastics",
+          description: "If scaled, it significantly cuts demand for oil-based plastic production."
+        },
+        {
+          title: "Industrial Viability Is Near",
+          description: "A demonstration plant is operational, and a full industrial plant is expected by 2025, which means this isn't just theoretical — it's nearing commercialization."
+        }
+      ],
+      limitations: [
+        {
+          title: "Limited Plastic Scope",
+          description: "It currently only works on PET — bottles, food containers, and some textiles. That's significant, but leaves out films, foams, and other polymers."
+        },
+        {
+          title: "High Scaling Cost and Tech Complexity",
+          description: "Bioreactor infrastructure, enzyme production, and energy use remain hurdles. It's not yet clear whether the economics beat traditional recycling in all contexts."
+        },
+        {
+          title: "Not a Removal Strategy",
+          description: "Unlike Ocean Cleanup or NASA, Carbios doesn't remove existing plastic from the environment — it addresses future waste."
+        }
       ]
     },
     evoware: {
       id: "evoware",
       name: "Evoware: Seaweed Bioplastics",
       country: "Indonesia",
-      coordinates: { x: 78, y: 50 },
+      coordinates: { x: 84, y: 58 },
       color: "bg-green-500",
       textColor: "text-white",
       icon: <Leaf size={24} />,
@@ -206,7 +244,188 @@ export default function Solutions() {
         "Cost of production is higher than traditional plastic alternatives",
         "Bioplastics need specific composting or disposal conditions to break down properly",
         "Still in the early stages of global scalability and awareness"
-      ]
+      ],
+      chemicalProcess: "This approach uses natural polysaccharides (primarily carrageenan) from seaweed rather than petroleum-derived polymers. The material biodegrades naturally through hydrolysis when exposed to moisture."
+    },
+    samsara: {
+      id: "samsara",
+      name: "Samsara Eco: Enzymatic Recycling of Nylon",
+      country: "Australia",
+      coordinates: { x: 86, y: 74 },
+      color: "bg-indigo-500",
+      textColor: "text-white",
+      icon: <Recycle size={24} />,
+      description: "Uses engineered enzymes to break down plastics like nylon and polyester into their original monomers.",
+      keyPoints: [
+        "Utilizes engineered enzymes to break down plastics like nylon 6,6, nylon 6, and polyester",
+        "Enables the recycling of mixed and colored plastic waste, including textiles",
+        "Has partnered with brands like Lululemon to produce garments from recycled materials",
+        "Currently scaling up operations with plans to establish commercial recycling plants"
+      ],
+      details: "Samsara Eco employs proprietary enzymes to depolymerize polymers like nylon 6,6 into monomers such as adipic acid and hexamethylenediamine. These monomers can be purified and repolymerized into new nylon products without quality degradation, creating a truly circular approach to plastic recycling.",
+      pros: [
+        "Facilitates true circular recycling by returning plastics to their monomeric forms",
+        "Effective on mixed and colored plastics, which are challenging for traditional recycling methods",
+        "Reduces reliance on virgin fossil fuels for plastic production",
+        "Operates under mild conditions, potentially lowering energy consumption"
+      ],
+      cons: [
+        "Currently focused on specific plastic types; broader applicability requires further development",
+        "Scaling the technology to industrial levels is complex and capital-intensive",
+        "Economic viability depends on market demand and regulatory support",
+        "Process efficiency may vary depending on plastic composition and contamination"
+      ],
+      chemicalProcess: "Samsara Eco has developed enzymes that depolymerize nylon 6 into its monomer: Nylon 6 + H₂O → ε-Caprolactam. This process enables the recycling of nylon 6 by breaking it down into ε-caprolactam, which can be repolymerized into new nylon products."
+    },
+    polymateria: {
+      id: "polymateria",
+      name: "Polymateria: Biodegradable Plastics via Biotransformation",
+      country: "United Kingdom",
+      coordinates: { x: 49, y: 21 },
+      color: "bg-green-600",
+      textColor: "text-white",
+      icon: <FlaskRound size={24} />,
+      description: "Developed a proprietary additive that enables conventional plastics to biodegrade in the environment.",
+      keyPoints: [
+        "The technology ensures plastics break down into water, CO₂, and biomass without leaving microplastics",
+        "Designed to be compatible with existing manufacturing processes",
+        "Biodegradation timelines can be tailored to specific product requirements",
+        "Maintains recyclability within standard recycling streams before degradation begins"
+      ],
+      details: "The additive initiates a controlled oxidative degradation process, breaking polymer chains into smaller, biodegradable molecules. These molecules are then consumed by microorganisms, resulting in complete biodegradation without microplastic formation, providing a solution for plastics that escape waste management systems.",
+      pros: [
+        "Provides a solution for plastics that escape waste management systems",
+        "Reduces environmental pollution by ensuring complete biodegradation",
+        "Maintains recyclability within standard recycling streams before degradation begins",
+        "Tested and proven under real-world conditions"
+      ],
+      cons: [
+        "Effectiveness depends on environmental conditions like sunlight and oxygen availability",
+        "Does not eliminate the need for proper waste management infrastructure",
+        "Potential concerns about the impact on recycling systems if not properly managed",
+        "May have higher initial costs compared to conventional plastics"
+      ],
+      chemicalProcess: "Polymateria's biotransformation technology involves a two-phase process: 1) Oxidative Degradation - The proprietary additive initiates oxidation, reducing the polymer's molecular weight to approximately 600–1000 Da, forming a waxy substance. 2) Biodegradation - Microorganisms consume the waxy substance, converting it into carbon dioxide, water, and biomass. This approach ensures complete biodegradation without leaving microplastics."
+    },
+    ferreira: {
+      id: "ferreira",
+      name: "Fionn Ferreira: Magnetic Removal of Microplastics",
+      country: "Ireland",
+      coordinates: { x: 47, y: 21 },
+      color: "bg-purple-500",
+      textColor: "text-white",
+      icon: <Magnet size={24} />,
+      description: "Developed a method using ferrofluids to bind and remove microplastics from water.",
+      keyPoints: [
+        "The process involves mixing water with a magnetic liquid that attracts microplastics",
+        "Microplastics are then extracted using magnets",
+        "Demonstrated high efficiency in laboratory settings",
+        "Aims to scale the technology for use in wastewater treatment facilities"
+      ],
+      details: "Ferrofluids, composed of magnetic nanoparticles suspended in a carrier liquid, bind to microplastics through hydrophobic interactions. The magnetic properties allow for the separation and removal of the microplastic-bound ferrofluid from water using external magnets, providing a novel solution to the challenging problem of microplastic pollution.",
+      pros: [
+        "Effectively removes microplastics that are challenging to filter using conventional methods",
+        "Non-toxic and safe for use in various water bodies, including drinking water sources",
+        "The ferrofluid can be reused multiple times, enhancing sustainability",
+        "Offers a potential solution for mitigating microplastic pollution in aquatic environments"
+      ],
+      cons: [
+        "Currently at the prototype stage; requires further development for large-scale application",
+        "Efficiency in diverse environmental conditions needs to be validated",
+        "Management and disposal of collected microplastics need to be addressed",
+        "May be cost-prohibitive for widespread implementation"
+      ],
+      chemicalProcess: "Fionn Ferreira developed a method using ferrofluids to remove microplastics from water: 1) Hydrophobic Interaction: The ferrofluid, composed of magnetic nanoparticles, binds to microplastics through hydrophobic interactions. 2) Magnetic Separation: A magnet is then used to extract the microplastic-bound ferrofluid from the water. This technique effectively removes microplastics without chemical alteration."
+    },
+    japan: {
+      id: "japan",
+      name: "Photoreforming of Plastics for Hydrogen Production",
+      country: "Japan",
+      coordinates: { x: 86, y: 34 },
+      color: "bg-yellow-500",
+      textColor: "text-gray-900",
+      icon: <Zap size={24} />,
+      description: "Uses solar energy and photocatalysts to convert plastic waste into hydrogen fuel and valuable chemicals.",
+      keyPoints: [
+        "Utilizes solar energy and photocatalysts to drive the degradation of plastics",
+        "Converts plastic waste into hydrogen fuel and valuable chemicals",
+        "Aims to provide a sustainable method for plastic waste management and clean energy production",
+        "Still in the research phase, with ongoing studies to improve efficiency and scalability"
+      ],
+      details: "Photocatalysts, such as titanium dioxide, are activated by sunlight to generate electron-hole pairs. These reactive species facilitate the breakdown of plastic polymers into smaller molecules, releasing hydrogen gas and forming other valuable chemicals like formate and acetate, offering a dual benefit of reducing plastic waste and generating renewable energy.",
+      pros: [
+        "Offers a dual benefit of reducing plastic waste and generating renewable energy",
+        "Operates under ambient conditions, potentially lowering energy requirements",
+        "Contributes to the development of a circular economy by converting waste into valuable resources",
+        "Reduces reliance on fossil fuels for hydrogen production"
+      ],
+      cons: [
+        "Currently limited to laboratory-scale experiments; not yet commercially viable",
+        "Efficiency and scalability challenges need to be addressed",
+        "Requires specific types of plastics and pre-treatment processes",
+        "Economic feasibility depends on advancements in catalyst development and system design"
+      ],
+      chemicalProcess: "Using a carbon nitride/nickel phosphide (CNx|Ni₂P) photocatalyst under alkaline conditions: PET + H₂O + Light → H₂ + CO₂ + Organic Acids (e.g., Formic Acid, Acetic Acid). This photoreforming process converts plastic waste into hydrogen fuel and valuable chemicals using solar energy."
+    },
+    lyondell: {
+      id: "lyondell",
+      name: "LyondellBasell: Chemical Recycling Facility",
+      country: "United States (LyondellBasell)",
+      coordinates: { x: 23, y: 37 },
+      color: "bg-blue-700",
+      textColor: "text-white",
+      icon: <Factory size={24} />,
+      description: "Converting a former refinery in Houston into a chemical recycling facility using proprietary MoReTec technology.",
+      keyPoints: [
+        "Aims to process a wide range of plastic waste, including those unsuitable for mechanical recycling",
+        "Plans to produce feedstock for new plastic materials, contributing to a circular economy",
+        "Employs pyrolysis to thermally decompose plastic waste into smaller hydrocarbon molecules",
+        "Faces scrutiny from environmental groups regarding potential emissions and community impact"
+      ],
+      details: "The MoReTec technology employs pyrolysis to thermally decompose plastic waste into smaller hydrocarbon molecules. The resulting products, such as pyrolysis oil and gas, can be refined into feedstock for new plastic production, expanding recycling capabilities to include diverse plastic types that are traditionally difficult to recycle.",
+      pros: [
+        "Expands recycling capabilities to include diverse plastic types",
+        "Reduces the need for virgin fossil resources in plastic production",
+        "Supports large-scale waste management and recycling efforts",
+        "Potentially lowers greenhouse gas emissions compared to traditional incineration"
+      ],
+      cons: [
+        "Chemical recycling processes can be energy-intensive",
+        "Concerns about environmental and health impacts from emissions",
+        "Public opposition due to past pollution violations at the site",
+        "Economic viability depends on market demand for recycled feedstock"
+      ],
+      chemicalProcess: "LyondellBasell's MoReTec technology employs pyrolysis to convert plastic waste into feedstock: Plastic Waste → Pyrolysis Oil + Pyrolysis Gas. The pyrolysis oil can be used to produce new plastics, while the gas can be utilized as an energy source or further processed."
+    },
+    congo: {
+      id: "congo",
+      name: "Kinshasa Thermal Power Station: Waste-to-Energy via Pyrolysis",
+      country: "Democratic Republic of the Congo",
+      coordinates: { x: 56, y: 58 },
+      color: "bg-red-700",
+      textColor: "text-white",
+      icon: <Zap size={24} />,
+      description: "A planned facility in Kinshasa aiming to convert 200 tonnes of plastic waste daily into energy and valuable byproducts.",
+      keyPoints: [
+        "Utilizes pyrolysis technology to transform plastic waste into diesel fuel, industrial lubricants, and solid carbon",
+        "Expected to generate approximately 96 MWh of electricity annually for the national grid",
+        "Developed by Clean-Seas Inc., with an estimated investment of US$30 million",
+        "Addresses significant plastic waste problem in Kinshasa"
+      ],
+      details: "Pyrolysis involves heating plastic waste to temperatures above 400°C in an oxygen-deprived environment. This thermal decomposition breaks down long-chain polymers into shorter hydrocarbon molecules, yielding gaseous products for energy generation, liquid fuels, and solid residues, converting non-recyclable plastics into useful energy and materials.",
+      pros: [
+        "Addresses the significant plastic waste problem in Kinshasa, where daily solid waste generation is substantial",
+        "Converts non-recyclable plastics into useful energy and materials, reducing landfill usage",
+        "Provides a source of electricity and industrial products, supporting local infrastructure and economy",
+        "Demonstrates a scalable model for waste-to-energy conversion in urban African settings"
+      ],
+      cons: [
+        "Pyrolysis processes can be energy-intensive and may produce emissions if not properly managed",
+        "Requires consistent supply of plastic waste and maintenance of high-temperature operations",
+        "Initial capital investment is substantial, and economic viability depends on market demand for byproducts",
+        "Potential environmental concerns related to the handling and disposal of byproducts like char"
+      ],
+      chemicalProcess: "The Kinshasa Thermal Power Station plans to convert plastic waste into energy and byproducts through pyrolysis: Plastic Waste → Diesel Fuel + Industrial Lubricants + Char (Solid Carbon) + Syngas. This process involves heating plastic waste above 400°C in an oxygen-deprived environment, breaking down polymers into usable fuels and materials."
     }
   };
 
@@ -363,8 +582,12 @@ export default function Solutions() {
                       }
                     }}
                     className={`px-4 py-3 rounded-md font-bold transition-all flex items-center justify-center
-                      ${activeSolution === solution.id ? 'bg-white text-red-600 shadow-lg scale-105' : 'bg-red-700 bg-opacity-30 text-white hover:bg-red-700 hover:bg-opacity-50'}`}
+                      ${activeSolution === solution.id ? 'bg-white text-red-600 shadow-lg scale-105' : 'bg-red-700 bg-opacity-30 text-white hover:bg-red-700 hover:bg-opacity-50'}
+                      ${solution.id === 'carbios' ? 'border-2 border-yellow-400' : ''}`}
                   >
+                    {solution.id === 'carbios' && (
+                      <Star size={12} className="text-yellow-400 mr-1 inline-flex" />
+                    )}
                     {solution.country}
                   </button>
                 ))}
@@ -413,6 +636,11 @@ export default function Solutions() {
                         <div className={`w-12 h-12 rounded-full ${solution.color} ${solution.textColor} flex items-center justify-center shadow-lg
                           ${activeSolution === solution.id ? 'ring-4 ring-white' : ''}`}>
                           {solution.icon}
+                          {solution.id === 'carbios' && (
+                            <div className="absolute -top-1 -right-1 bg-yellow-400 rounded-full p-1">
+                              <Star size={10} className="text-white" />
+                            </div>
+                          )}
                         </div>
                         <div className={`absolute top-full left-1/2 transform -translate-x-1/2 mt-1 whitespace-nowrap 
                           font-bold text-xs px-2 py-1 rounded-md ${solution.color} ${solution.textColor} shadow-md`}>
@@ -459,6 +687,11 @@ export default function Solutions() {
                           <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center">
                             <div className={`w-12 h-12 ${solution.color} rounded-full flex items-center justify-center`}>
                               {solution.icon}
+                              {solution.id === 'carbios' && (
+                                <div className="absolute -top-1 -right-1 bg-yellow-400 rounded-full p-1">
+                                  <Star size={12} className="text-white" />
+                                </div>
+                              )}
                             </div>
                           </div>
                         </div>
@@ -484,7 +717,34 @@ export default function Solutions() {
                         </div>
                         
                         <p className="text-gray-700">{solution.details}</p>
+                        
+                        {/* Chemical Process Section */}
+                        <div className="mt-6 bg-blue-50 rounded-lg p-6 border border-blue-100">
+                          <h4 className="text-lg font-bold mb-4 text-blue-800 flex items-center">
+                            <FlaskRound size={20} className="mr-2" />
+                            Chemical Process
+                          </h4>
+                          <p className="text-gray-700">{solution.chemicalProcess}</p>
+                        </div>
                       </div>
+                      
+                      {/* Special Carbios Section */}
+                      {solution.id === 'carbios' && solution.whyBest && (
+                        <div className="mb-8 bg-yellow-50 p-6 rounded-lg border border-yellow-200">
+                          <h3 className="text-xl font-bold mb-4 text-yellow-700 flex items-center">
+                            <Star size={20} className="mr-2 text-yellow-500" />
+                            Why This Solution Stands Out
+                          </h3>
+                          <div className="space-y-4">
+                            {solution.whyBest.map((item, index) => (
+                              <div key={index} className="pb-4 border-b border-yellow-100 last:border-0">
+                                <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
+                                <p className="text-gray-700">{item.description}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                       
                       {/* Pros and Cons */}
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -530,6 +790,24 @@ export default function Solutions() {
                           </ul>
                         </div>
                       </div>
+                      
+                      {/* Special Carbios Limitations Section */}
+                      {solution.id === 'carbios' && solution.limitations && (
+                        <div className="mt-8 bg-red-50 p-6 rounded-lg border border-red-200">
+                          <h3 className="text-xl font-bold mb-4 text-red-700 flex items-center">
+                            <Info size={20} className="mr-2 text-red-500" />
+                            Key Challenges
+                          </h3>
+                          <div className="space-y-4">
+                            {solution.limitations.map((item, index) => (
+                              <div key={index} className="pb-4 border-b border-red-100 last:border-0">
+                                <h4 className="font-bold text-gray-900 mb-1">{item.title}</h4>
+                                <p className="text-gray-700">{item.description}</p>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -576,6 +854,11 @@ export default function Solutions() {
         @keyframes bounce-slow {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
         }
         
         .bg-grid-pattern {
