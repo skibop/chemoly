@@ -1,34 +1,31 @@
 module.exports = {
-    parser: '@typescript-eslint/parser', // Use TypeScript parser for .ts and .tsx files
+    parser: '@typescript-eslint/parser',
     extends: [
-      'plugin:react/recommended', // Recommended React rules
-      'plugin:@typescript-eslint/recommended', // Recommended TypeScript rules
-      'next/core-web-vitals', // Next.js core web vitals rules
+      'plugin:react/recommended',
+      'plugin:@typescript-eslint/recommended',
+      'next/core-web-vitals',
     ],
+    plugins: ['react', '@typescript-eslint'],
     parserOptions: {
-      ecmaVersion: 2020, // Support modern JavaScript (async/await, etc.)
-      sourceType: 'module', // Enable ES module syntax (import/export)
+      ecmaVersion: 2020,
+      sourceType: 'module',
       ecmaFeatures: {
-        jsx: true, // Support JSX syntax in React files
+        jsx: true,
       },
     },
     settings: {
       react: {
-        version: 'detect', // Automatically detect React version
+        version: 'detect',
       },
     },
     rules: {
-      'react/react-in-jsx-scope': 'off', // No need for React to be in scope with Next.js
-      '@typescript-eslint/explicit-module-boundary-types': 'off', // Optional: Disable explicit types for function return types
-      '@typescript-eslint/no-unused-vars': 'off', // Turn off unused variable check (can be adjusted as needed)
-      '@typescript-eslint/no-explicit-any': 'off', // Allow 'any' type (can be adjusted if needed)
-      'react/no-unescaped-entities': 'off', // Disable rule for unescaped entities in JSX
-      'import/no-unresolved': 'off', // Allow unresolved imports temporarily (adjust if needed)
-      '@typescript-eslint/no-empty-object-type': 'off', // Disable the no-empty-object-type rule
+      'react/react-in-jsx-scope': 'off',
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+      'react/no-unescaped-entities': 'off',
+      'import/no-unresolved': 'off',
+      '@typescript-eslint/no-empty-interface': 'off',
     },
   };
-<<<<<<< HEAD
   
-=======
-  
->>>>>>> c2210c780e2a208779016f8aa10e122d1efb5fc9
