@@ -701,7 +701,7 @@ export default function Plastic1() {
                         </div>
                         
                         <div className="mt-6 bg-white rounded-lg border border-green-200 overflow-hidden">
-                          <div className="bg-green-600 py-2 px-4">
+                          <div className="bg-red-500 py-2 px-4">
                             <h4 className="text-white font-medium text-sm text-center">Breakthrough Research</h4>
                           </div>
                           <div className="p-4">
