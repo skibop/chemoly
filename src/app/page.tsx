@@ -2,7 +2,7 @@
 
 import Link from "next/link"
 import { useEffect, useState, useRef } from "react"
-import { Droplets, Recycle, Factory, Leaf, ChevronDown, Menu, X } from "lucide-react"
+import { Recycle, Factory, Leaf, ChevronDown, Menu, X } from "lucide-react"
 import * as THREE from 'three'
 
 export default function Home() {
@@ -121,9 +121,7 @@ export default function Home() {
     const carbonGeometry = new THREE.SphereGeometry(0.45, 32, 32);
     const hydrogenGeometry = new THREE.SphereGeometry(0.25, 24, 24);
     const oxygenGeometry = new THREE.SphereGeometry(0.5, 32, 32);
-    const nitrogenGeometry = new THREE.SphereGeometry(0.48, 32, 32);
-    const bondGeometry = new THREE.CylinderGeometry(0.08, 0.08, 1, 16);
-    
+    const nitrogenGeometry = new THREE.SphereGeometry(0.48, 32, 32);    
     // Create a more complex molecule structure (similar to caffeine)
     // Positions for a caffeine-like structure
     const atomPositions = [
