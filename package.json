@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@netlify/plugin-nextjs": "^5.11.1",
     "@radix-ui/react-dropdown-menu": "^2.1.7",
     "@radix-ui/react-navigation-menu": "^1.2.6",
     "@radix-ui/react-slot": "^1.2.0",
