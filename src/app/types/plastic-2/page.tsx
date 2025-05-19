@@ -24,9 +24,9 @@ export default function Plastic2() {
 
   // Define the images array with URLs of the images
   const images = [
-    "/images/image1.png",
-    "/images/image2.png",
-    "/images/image3.png"
+    "/plastic-2-images/image1.png",
+    "/plastic-2-images/image2.png",
+    "/plastic-2-images/image3.png"
   ];
   const handleMouseEnterDropdown = () => {
     if (closeTimeoutRef.current) {
@@ -181,8 +181,8 @@ export default function Plastic2() {
             {/* Header */}
             <header className="w-full bg-red-600 text-white pt-32 pb-16 shadow-md">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-6xl font-bold">HDPE</h1>
-                     <p className="text-xl mt-4">High-Density Polyethylene</p>
+                    <h1 className="text-6xl font-bold">Heavy-Duty Plastic Bottles</h1>
+                     <p className="text-xl mt-4">Plastic Used: High-Density Polyethylene</p>
                 </div>
             </header>
 
@@ -196,8 +196,7 @@ export default function Plastic2() {
                         </h2>
                         <div className="text-lg leading-relaxed text-center px-8 pb-8 bg-gray-100 text-white bg-red-600">
                             <p>
-                            High-Density Polyethylene (HDPE) is a polymer formed through the polymerization of ethylene monomers under high pressure and temperature with catalysts. 
-                            Its chemical structure consists of repeating CH₂-CH₂ units in a linear chain with minimal branching, making it extremely strong, chemical-resistant, and durable.
+                            High-Density Polyethylene (HDPE) is a thermoplastic polymer produced through the polymerization of ethylene using catalysts like Ziegler-Natta. The reaction forms long, mostly unbranched chains of repeating –CH₂– units, creating a dense, linear structure. This arrangement allows the molecules to pack closely together, resulting in high strength, stiffness, and resistance to moisture and chemicals.
                             </p>
                         </div>
                     </div>
@@ -297,7 +296,7 @@ export default function Plastic2() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Health Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                HDPE is considered food-safe and FDA-approved for food contact. However, prolonged UV exposure can lead to degradation and potential release of microplastics. Some additives used in production may cause allergic reactions in sensitive individuals.
+                HDPE is FDA-approved for food contact because its simple, non-polar structure consisting of repeating –CH₂– units makes it chemically inert and resistant to leaching. However, prolonged UV exposure can break the carbon-carbon bonds in its backbone, leading to chain scission, surface embrittlement, and microplastic formation. While HDPE itself is non-toxic, additives like stabilizers, plasticizers, and pigments used to modify its properties may migrate under certain conditions and potentially trigger allergic responses in sensitive individuals.
                 </p>
               </div>
               
@@ -312,8 +311,7 @@ export default function Plastic2() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Environmental Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                Production requires significant energy from fossil fuels. While highly recyclable, HDPE products often have long service lives in landfills where they can take 450+ years to decompose. Manufacturing releases greenhouse gases contributing to climate change.
-                </p>
+                HDPE production relies heavily on fossil fuels, both as raw material and energy source, leading to significant greenhouse gas emissions. Its long, tightly packed polymer chains give it high durability, but also make it resistant to natural degradation, causing HDPE waste to persist in landfills for over 450 years. Although HDPE is highly recyclable, improper disposal and limited recycling infrastructure reduce its environmental benefits.                </p>
               </div>
             </div>
           </section>

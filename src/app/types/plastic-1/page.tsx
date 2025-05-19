@@ -750,9 +750,10 @@ export default function Plastic1() {
             </main>
 
             {/* Footer */}
-            <footer className="w-full bg-gray-100 py-4">
-                <div className="container mx-auto px-4 text-center text-sm text-gray-600">
-                    © 2025 Chemoly. All rights reserved.
+            <footer className="relative z-10 bg-red-50 border-t border-red-100 py-8">
+                <div className="container mx-auto px-6 text-center">
+                <p className="text-gray-700 mb-2">Designed and Developed by Ankit Kale, Sreeram Vuppala, and Abhiram Kuuram</p>
+                <p> South Brunswick High School Team A, 2025 </p>
                 </div>
             </footer>
         </div>
