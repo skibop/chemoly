@@ -2,70 +2,162 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, ArrowLeft, ArrowRight } from 'lucide-react'
+import { ChevronDown, Menu, X, ArrowLeft, ArrowRight, Beaker, Info } from 'lucide-react'
 import Image from 'next/image'
 
-// Stage data structure
+// Stage data structure with JPG images instead of SVGs
 const stages = [
   {
     id: 1,
     title: "Everyday PET Plastics",
     description: "PET (polyethylene terephthalate) is found in common items like water bottles, soda bottles, food containers, and synthetic clothing (polyester).",
-    imageUrl: "/graphic/pet-sources.svg",
+    imageUrl: "/graphic/pet-sources.jpeg", // Changed from .svg to .jpg
     iconColor: "bg-blue-500",
     facts: [
       "Over 500 billion plastic bottles are used worldwide every year",
       "The average American uses 156 plastic bottles annually",
       "PET is the most commonly recycled plastic"
-    ]
+    ],
+    chemistry: {
+      title: "PET Chemistry",
+      sections: [
+        {
+          subtitle: "Polyethylene Terephthalate (PET) Monomer Unit",
+          content: "PET is formed by a condensation polymerization reaction between terephthalic acid (C₆H₄(CO₂H)₂) and ethylene glycol (HO–CH₂CH₂–OH)."
+        },
+        {
+          subtitle: "Polymerization Reaction",
+          content: "nHO–CH₂CH₂–OH + nHOOC–C₆H₄–COOH → [–O–CH₂CH₂–O–C(O)–C₆H₄–C(O)–]ₙ + 2nH₂O",
+          isEquation: true
+        },
+        {
+          subtitle: "Properties of PET",
+          content: "• Thermoplastic\n• High tensile strength\n• Non-biodegradable\n• Resistant to water and alcohols"
+        }
+      ]
+    }
   },
   {
     id: 2,
     title: "Breaks into Microplastics",
     description: "Plastic items break down into microplastics (particles less than 5mm) through mechanical abrasion, UV degradation, and washing synthetic fabrics.",
-    imageUrl: "/graphic/microplastic-formation.svg",
+    imageUrl: "/graphic/microplastic-formation.jpg", // Changed from .svg to .jpg
     iconColor: "bg-purple-500",
     facts: [
       "A single wash of polyester clothing can release 700,000 microplastic fibers",
       "Microplastics can be created through physical wear or UV degradation",
       "Microplastics are defined as plastic particles smaller than 5mm"
-    ]
+    ],
+    chemistry: {
+      title: "Breakdown Chemistry",
+      sections: [
+        {
+          subtitle: "Photodegradation",
+          content: "UV light causes chain scission in PET, forming radicals and breaking the polymer into smaller fragments. This is an example of photo-oxidation, where oxygen reacts with free radicals."
+        },
+        {
+          subtitle: "General Reaction",
+          content: "PET + hν + O₂ → PET fragments + CO, CO₂, aldehydes, ketones",
+          isEquation: true
+        },
+        {
+          subtitle: "Mechanical Breakdown",
+          content: "Abrasion does not alter chemical structure, but physically reduces PET to microplastics (<5 mm)."
+        },
+        {
+          subtitle: "Fiber Shedding",
+          content: "Mechanical stress and warm water release PET microfibers, especially from synthetic textiles."
+        }
+      ]
+    }
   },
   {
     id: 3,
     title: "Microplastics in Air, Water, and Soil",
     description: "Microplastics enter the environment through multiple pathways: washing machines to wastewater to water bodies, and littering leading to degradation into soil and water.",
-    imageUrl: "/graphic/environment-entry.svg",
+    imageUrl: "/graphic/environment-entry.jpg", // Changed from .svg to .jpg
     iconColor: "bg-green-500",
     facts: [
       "14 million tons of microplastics are estimated to be on the ocean floor",
       "Rain can contain up to 249,000 microplastic particles per square meter",
       "Wastewater treatment plants can remove 90% of microplastics, but the remainder still enters waterways"
-    ]
+    ],
+    chemistry: {
+      title: "Environmental Chemistry",
+      sections: [
+        {
+          subtitle: "Environmental Persistence",
+          content: "PET is hydrophobic and stable, so it resists degradation and persists in the environment for decades."
+        },
+        {
+          subtitle: "Surface Adsorption",
+          content: "Microplastics act as sorbents for organic pollutants like PCBs, PAHs, and heavy metals due to hydrophobic interactions."
+        },
+        {
+          subtitle: "Biofilm Formation",
+          content: "In water, microbial communities colonize PET particles, altering their density and mobility."
+        }
+      ]
+    }
   },
   {
     id: 4,
     title: "Inhaled and Ingested",
     description: "Humans are exposed to microplastics primarily through ingestion (bottled water, seafood, salt) and inhalation of airborne fibers from synthetic materials.",
-    imageUrl: "/graphic/human-exposure.svg",
+    imageUrl: "/graphic/human-exposure.jpg", // Changed from .svg to .jpg
     iconColor: "bg-orange-500",
     facts: [
       "The average person may consume up to 5 grams of microplastics weekly - equivalent to a credit card",
       "Bottled water contains 22x more microplastics than tap water on average",
       "Indoor air can contain 2-20 microplastic particles per cubic meter"
-    ]
+    ],
+    chemistry: {
+      title: "Exposure Chemistry",
+      sections: [
+        {
+          subtitle: "Inhalation",
+          content: "Indoor environments contain airborne microfibers from synthetic clothing and household materials. PET fibers are non-reactive, but can carry adsorbed toxins (e.g., phthalates, PAHs)."
+        },
+        {
+          subtitle: "Ingestion",
+          content: "Bottled water and seafood are contaminated with microplastics. Microplastics can bind endocrine-disrupting compounds like bisphenol A (BPA) or phthalates."
+        },
+        {
+          subtitle: "Leaching Equation",
+          content: "PET–additive → PET + Additive (e.g., BPA)",
+          isEquation: true
+        }
+      ]
+    }
   },
   {
     id: 5,
     title: "Where It Ends Up",
     description: "Microplastics have been detected in human blood, lungs, placenta, and stool. Research on health effects is ongoing, with concerns about inflammation and hormone disruption.",
-    imageUrl: "/graphic/body-impact.svg",
+    imageUrl: "/graphic/body-impact.jpg", // Changed from .svg to .jpg
     iconColor: "bg-red-500",
     facts: [
       "Microplastics have been found in human placentas, potentially affecting fetal development",
       "A 2022 study found microplastics in human blood for the first time",
       "Research suggests microplastics may cause inflammation and cellular damage"
-    ]
+    ],
+    chemistry: {
+      title: "Body Impact Chemistry",
+      sections: [
+        {
+          subtitle: "Transport",
+          content: "Microplastics may cross cell membranes via endocytosis or paracellular transport. Nanoplastics (<100 nm) have shown the ability to enter the bloodstream and cross the placental barrier."
+        },
+        {
+          subtitle: "Bioaccumulation",
+          content: "Detected in blood, lungs, placenta, and feces. PET itself is inert but may act as a vector for chemical toxins or microbes."
+        },
+        {
+          subtitle: "Biochemical Effects",
+          content: "• Inflammation: foreign body response to microplastics\n• Oxidative stress: via ROS generation if additives leach\n• Hormone disruption: BPA and phthalates mimic estrogen"
+        }
+      ]
+    }
   }
 ]
 
@@ -75,6 +167,7 @@ export default function PlasticFormationPage() {
   const [scrollY, setScrollY] = useState(0)
   const [typesDropdownOpen, setTypesDropdownOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [showChemistry, setShowChemistry] = useState(false)
   const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const stageRefs = useRef<(HTMLDivElement | null)[]>([])
 
@@ -111,6 +204,11 @@ export default function PlasticFormationPage() {
       setCurrentStage(stageNumber)
       setIsTransitioning(false)
     }, 500)
+  }
+
+  // Toggle between info and chemistry views
+  const toggleChemistryView = () => {
+    setShowChemistry(!showChemistry)
   }
 
   // Scroll handling
@@ -338,44 +436,111 @@ export default function PlasticFormationPage() {
                   {/* Visual representation */}
                   <div className="w-full md:w-1/2 flex justify-center items-center">
                     <div className={`relative w-72 h-72 md:w-96 md:h-96 ${isTransitioning ? 'animate-pulse' : 'animate-float'}`} style={{animationDuration: '6s'}}>
-                      <div className="absolute inset-0 rounded-full bg-gradient-to-br from-white to-gray-100 shadow-lg flex items-center justify-center">
-                        {/* Placeholder image - replace with actual images */}
-                        <div className="relative w-4/5 h-4/5 animate-bounce-slow" style={{animationDuration: '5s'}}>
-                          <div className="absolute inset-0 bg-contain bg-center bg-no-repeat" style={{
-                            backgroundImage: `url('/api/placeholder/${stage.id}')`,
-                            filter: 'drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.15))'
-                          }}></div>
+                      <div className="absolute inset-0 rounded-full overflow-hidden bg-gradient-to-br from-white to-gray-100 shadow-lg">
+                        {/* Image for this stage - using Next.js Image component */}
+                        <div className="relative w-full h-full">
+                          <Image
+                            src={stage.imageUrl}
+                            alt={`Illustration for ${stage.title}`}
+                            fill
+                            sizes="(max-width: 768px) 100vw, 50vw"
+                            className="object-cover"
+                            priority={stage.id === currentStage}
+                          />
                         </div>
                       </div>
                     </div>
                   </div>
                   
-                  {/* Text content */}
-                  <div className="w-full md:w-1/2 p-6 bg-white bg-opacity-70 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100">
-                    <div className={`inline-block ${stage.iconColor} text-white px-3 py-1 rounded-full text-sm font-medium mb-4`}>
-                      Stage {stage.id}
+                  {/* Content panel with toggle between info and chemistry */}
+                  <div className="w-full md:w-1/2 flex flex-col">
+                    {/* Toggle buttons */}
+                    <div className="flex justify-end mb-2">
+                      <div className="bg-white rounded-full p-1 shadow-md flex">
+                        <button 
+                          onClick={() => setShowChemistry(false)}
+                          className={`px-3 py-1.5 rounded-full flex items-center text-sm font-medium transition-colors ${
+                            !showChemistry 
+                              ? `bg-${stage.iconColor.split('-')[1]}-500 text-white` 
+                              : 'text-gray-600 hover:bg-gray-100'
+                          }`}
+                        >
+                          <Info size={16} className="mr-1.5" />
+                          Info
+                        </button>
+                        <button 
+                          onClick={() => setShowChemistry(true)}
+                          className={`px-3 py-1.5 rounded-full flex items-center text-sm font-medium transition-colors ${
+                            showChemistry 
+                              ? `bg-${stage.iconColor.split('-')[1]}-500 text-white` 
+                              : 'text-gray-600 hover:bg-gray-100'
+                          }`}
+                        >
+                          <Beaker size={16} className="mr-1.5" />
+                          Chemistry
+                        </button>
+                      </div>
                     </div>
-                    <h2 className="text-3xl font-bold mb-4 text-gray-900">{stage.title}</h2>
-                    <p className="text-lg text-gray-700 mb-6 leading-relaxed">{stage.description}</p>
-                    
-                    {/* Key facts */}
-                    <div className="bg-gray-50 p-4 rounded-xl">
-                      <h3 className="text-sm uppercase text-gray-500 font-medium mb-3">Key Facts</h3>
-                      <ul className="space-y-2">
-                        {stage.facts.map((fact, i) => (
-                          <li key={i} className="flex items-start">
-                            <span className={`${stage.iconColor} rounded-full w-2 h-2 mt-2 mr-2 flex-shrink-0`}></span>
-                            <span className="text-gray-700">{fact}</span>
-                          </li>
+
+                    {/* Main info panel */}
+                    <div 
+                      className={`p-6 bg-white bg-opacity-70 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 transition-all duration-300 ${
+                        showChemistry ? 'opacity-0 h-0 overflow-hidden pointer-events-none absolute' : 'opacity-100'
+                      }`}
+                    >
+                      <div className={`inline-block ${stage.iconColor} text-white px-3 py-1 rounded-full text-sm font-medium mb-4`}>
+                        Stage {stage.id}
+                      </div>
+                      <h2 className="text-3xl font-bold mb-4 text-gray-900">{stage.title}</h2>
+                      <p className="text-lg text-gray-700 mb-6 leading-relaxed">{stage.description}</p>
+                      
+                      {/* Key facts */}
+                      <div className="bg-gray-50 p-4 rounded-xl">
+                        <h3 className="text-sm uppercase text-gray-500 font-medium mb-3">Key Facts</h3>
+                        <ul className="space-y-2">
+                          {stage.facts.map((fact, i) => (
+                            <li key={i} className="flex items-start">
+                              <span className={`${stage.iconColor} rounded-full w-2 h-2 mt-2 mr-2 flex-shrink-0`}></span>
+                              <span className="text-gray-700">{fact}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+
+                    {/* Chemistry panel */}
+                    <div 
+                      className={`p-6 bg-white bg-opacity-70 backdrop-blur-sm rounded-2xl shadow-lg border border-gray-100 transition-all duration-300 h-full ${
+                        !showChemistry ? 'opacity-0 h-0 overflow-hidden pointer-events-none absolute' : 'opacity-100'
+                      }`}
+                    >
+                      <div className={`inline-block ${stage.iconColor} text-white px-3 py-1 rounded-full text-sm font-medium mb-4`}>
+                        <Beaker size={14} className="inline mr-1" />
+                        Chemistry
+                      </div>
+                      <h2 className="text-3xl font-bold mb-4 text-gray-900">{stage.chemistry.title}</h2>
+                      
+                      <div className="space-y-5">
+                        {stage.chemistry.sections.map((section, i) => (
+                          <div key={i} className="border-l-2 pl-4" style={{borderColor: `var(--${stage.iconColor.split('-')[1]}-500)`}}>
+                            <h3 className="font-semibold text-lg mb-2 text-gray-800">{section.subtitle}</h3>
+                            {section.isEquation ? (
+                              <div className="bg-gray-50 p-3 rounded-lg font-mono text-center my-2 overflow-x-auto">
+                                {section.content}
+                              </div>
+                            ) : (
+                              <p className="text-gray-700 whitespace-pre-line">{section.content}</p>
+                            )}
+                          </div>
                         ))}
-                      </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
               
               {/* Navigation controls */}
-              <div className="absolute left-0 right-0 bottom-0 flex justify-between items-center mt-8 px-4">
+              <div className="absolute left-0 right-0 -bottom-16 flex justify-between items-center mt-8 px-4">
                 <button 
                   onClick={goToPrevStage}
                   disabled={currentStage === 1 || isTransitioning}
@@ -409,7 +574,7 @@ export default function PlasticFormationPage() {
         </section>
         
         {/* Call to action section */}
-        <section className="relative z-10 py-16 bg-gradient-to-r from-red-50 to-red-100 mt-16">
+        <section className="relative z-10 py-16 bg-gradient-to-r from-red-50 to-red-100 mt-24">
           <div className="container mx-auto px-6 text-center">
             <h2 className="text-3xl font-bold mb-4 text-gray-900">Learn More About Plastic Impact</h2>
             <p className="text-xl text-gray-700 mb-8 max-w-2xl mx-auto">
@@ -431,7 +596,7 @@ export default function PlasticFormationPage() {
       <footer className="relative z-10 bg-red-50 border-t border-red-100 py-8">
         <div className="container mx-auto px-6 text-center">
           <p className="text-gray-700 mb-2">Designed and Developed by Ankit Kale, Sreeram Vuppala, and Abhiram Kuuram</p>
-          <p> South Brunswick High School Team A, 2025 </p>
+          <p>South Brunswick High School Team A, 2025</p>
         </div>
       </footer>
 
@@ -488,6 +653,15 @@ export default function PlasticFormationPage() {
         /* Smooth scrolling */
         html {
           scroll-behavior: smooth;
+        }
+        
+        /* CSS Variables for colors */
+        :root {
+          --blue-500: #3b82f6;
+          --purple-500: #8b5cf6;
+          --green-500: #10b981;
+          --orange-500: #f59e0b;
+          --red-500: #ef4444;
         }
       `}</style>
     </div>
