@@ -162,18 +162,6 @@ export default function Types() {
       recycling: "Technically recyclable but not often accepted in curbside programs; specialized recycling required.",
       environmental: "Durable and long-lasting, reducing replacement frequency; can be recycled but often isn't."
     },
-    {
-      id: 7.2,
-      code: "PC",
-      name: "Polycarbonate",
-      color: "bg-gray-400",
-      textColor: "text-white",
-      description: "A durable, impact-resistant plastic used in applications requiring clarity and toughness. Historically contained BPA, raising health concerns about food contact. Newer BPA-free formulations are becoming more common for food-related applications.",
-      properties: ["Very durable", "Impact resistant", "Heat resistant", "Transparent", "Lightweight"],
-      uses: ["Water bottles", "Baby bottles (historically)", "Electronics", "Eyeglass lenses", "Bulletproof glass"],
-      recycling: "Limited recycling options; not typically accepted in curbside programs.",
-      environmental: "Energy-intensive to produce; concerns about BPA leaching; long decomposition time."
-    }
   ];
 
   return (
@@ -435,7 +423,7 @@ export default function Types() {
                             <h3 className="text-xl font-bold mb-3 text-red-600">Chemical Structure</h3>
                             <div className="bg-white rounded-lg border border-gray-200 p-4 flex items-center justify-center">
                               <img 
-                                src="/api/placeholder/400/200" 
+                                src={`/images/structures/${plastic.name.toLowerCase().replace(/\s+/g, '-')}.png`} 
                                 alt={`${plastic.name} chemical structure`} 
                                 className="max-h-48 object-contain structure-animation"
                               />
