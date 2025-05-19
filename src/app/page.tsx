@@ -14,6 +14,91 @@ export default function Home() {
     manufacturing: false,
     recycling: false
   });
+
+  {/* Add these hooks at the top of your component, just after your existing useState declarations */}
+const [activeStory, setActiveStory] = useState(0);
+
+// Functions to navigate between stories
+const nextStory = () => {
+  if (activeStory < stories.length - 1) {
+    setActiveStory(activeStory + 1);
+  }
+};
+
+const prevStory = () => {
+  if (activeStory > 0) {
+    setActiveStory(activeStory - 1);
+  }
+};
+
+// Story data
+const stories = [
+  {
+    name: "Maria Gonzalez",
+    age: "42",
+    occupation: "Fisherwoman",
+    location: "Philippines",
+    title: "The Vanishing Catch",
+    imageSrc: "/fisher-women.jpg", // Replace with: "/stories/philippines-fishing.jpg"
+    imageAlt: "Filipino fishing community struggling with plastic pollution",
+    story: "Maria has fished the waters off Palawan for over 25 years. In the last decade, her daily catch has declined by 60%. Her nets now collect more plastic than fish some days. The microplastics have contaminated local fish populations, affecting both their numbers and the safety of consuming them.",
+    quote: "The ocean gave us life for generations. Now we pull up bottles, bags, and tiny plastic pieces instead of fish. Our children may never know the abundance we once had.",
+    impactArea: "Livelihood",
+    tags: ["Fishing communities", "Marine life", "Microplastics"]
+  },
+  {
+    name: "Raj Patel",
+    age: "38",
+    occupation: "Community Health Worker",
+    location: "India",
+    title: "Breathing Plastic",
+    imageSrc: "/delhi-plastic.jpg", // Replace with: "/stories/india-waste-burning.jpg"
+    imageAlt: "Burning plastic waste in India creating toxic smoke",
+    story: "In Raj's community outside Delhi, waste management infrastructure is minimal. Plastic waste is often burned in open piles, releasing toxic chemicals. As a health worker, he's documented a 300% increase in respiratory conditions in children under 10. His own daughter now needs an inhaler to breathe properly.",
+    quote: "These children have done nothing to deserve this. They struggle to breathe because we have no proper way to manage plastic waste. This is the air they breathe every day.",
+    impactArea: "Health",
+    tags: ["Air pollution", "Waste management", "Children's health"]
+  },
+  {
+    name: "Sarah Johnson",
+    age: "51",
+    occupation: "Marine Biologist",
+    location: "Australia",
+    title: "Great Barrier Grief",
+    imageSrc: "/barrier-reef.jpg", // Replace with: "/stories/australia-coral-plastic.jpg"
+    imageAlt: "Plastic waste caught in Great Barrier Reef coral",
+    story: "Sarah has studied the Great Barrier Reef for over two decades. She's documented how microplastics have invaded even the most remote parts of the reef ecosystem. Her research reveals that 73% of coral species now show signs of plastic ingestion, with microplastics found embedded in their tissues, disrupting their growth and reproduction.",
+    quote: "When I started my career, we worried about climate change and ocean acidification. Now we've added a third crisis - plastics have infiltrated every level of marine life, from plankton to predators.",
+    impactArea: "Ecosystems",
+    tags: ["Coral reefs", "Marine science", "Biodiversity"]
+  },
+  {
+    name: "Emmanuel Okafor",
+    age: "29",
+    occupation: "Urban Farmer",
+    location: "Nigeria",
+    title: "Soil Under Siege",
+    imageSrc: "/plastic-farmer.webp", // Replace with: "/stories/nigeria-urban-farming.jpg"
+    imageAlt: "Urban farming plot in Nigeria with plastic contamination issues",
+    story: "Emmanuel's community urban farm in Lagos was his answer to food insecurity. But after testing the soil, he discovered alarming levels of microplastics and plastic-leached chemicals. The neighborhood's improper waste disposal has contaminated the soil, affecting crop yields and potentially the safety of the food grown there.",
+    quote: "We created these farms to feed our communities clean food. Now we wonder if we're feeding them plastic too. The soil that should give life is full of particles that never degrade.",
+    impactArea: "Food Security",
+    tags: ["Urban agriculture", "Soil contamination", "Food safety"]
+  },
+  {
+    name: "Elena Vasquez",
+    age: "33",
+    occupation: "Pediatrician",
+    location: "Mexico",
+    title: "Children of Plastic",
+    imageSrc: "/micro-plastic-blood.webp", // Replace with: "/stories/mexico-medical-research.jpg"
+    imageAlt: "Doctor examining test results showing microplastic presence in children",
+    story: "Dr. Vasquez led a study that found microplastics in the blood samples of 92% of children in her Mexico City clinic. Further research connected these findings to disruptions in hormonal development and immune response. The highest levels were found in children from areas with poor waste management infrastructure.",
+    quote: "These children are the first generation to grow up with plastics in their bodies from birth. We simply don't know the long-term consequences, and that uncertainty keeps me awake at night.",
+    impactArea: "Children's Health",
+    tags: ["Medical research", "Environmental health", "Pediatrics"]
+  }
+];
   
   // State for dropdown menu
   const [typesDropdownOpen, setTypesDropdownOpen] = useState(false);
@@ -671,6 +756,123 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="relative z-10 py-24 bg-gray-50">
+      <div className="container mx-auto px-6 relative">
+        {/* Section heading */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900">Impact Stories</h2>
+          <p className="text-xl text-gray-600 mt-2 max-w-3xl mx-auto">
+            Behind the statistics are real people whose lives have been changed by plastic pollution
+          </p>
+        </div>
+        
+        {/* Carousel component */}
+        <div className="relative overflow-hidden mb-8">
+          {/* Carousel slides */}
+          <div 
+            className="flex transition-transform duration-500 ease-in-out"
+            style={{ transform: `translateX(-${activeStory * 100}%)` }}
+          >
+            {stories.map((story, index) => (
+              <div key={`story-${index}`} className="w-full flex-shrink-0 px-4">
+                <div className="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col md:flex-row h-full">
+                  {/* Image side */}
+                  <div className="w-full md:w-1/2 h-64 md:h-auto relative">
+                    <img 
+                      src={story.imageSrc} 
+                      alt={story.imageAlt}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute top-0 left-0 bg-red-600 text-white px-4 py-2 text-sm font-bold">
+                      {story.location}
+                    </div>
+                  </div>
+                  
+                  {/* Content side */}
+                  <div className="w-full md:w-1/2 p-8 flex flex-col justify-between">
+                    <div>
+                      <h3 className="text-2xl font-bold mb-2 text-gray-900">{story.title}</h3>
+                      <div className="flex items-center mb-4">
+                        <div className="text-sm text-gray-500">{story.name}, {story.age}</div>
+                        <div className="h-4 border-l border-gray-300 mx-3"></div>
+                        <div className="text-sm text-gray-500">{story.occupation}</div>
+                      </div>
+                      <p className="text-gray-700 mb-4 leading-relaxed">{story.story}</p>
+                      <div className="mb-4 flex items-start flex-wrap">
+                        <div className="bg-red-100 text-red-800 text-xs px-3 py-1 rounded-full font-medium inline-block mr-2 mb-2">
+                          {story.impactArea}
+                        </div>
+                        {story.tags.map((tag, tagIndex) => (
+                          <div 
+                            key={`tag-${index}-${tagIndex}`} 
+                            className="bg-gray-100 text-gray-800 text-xs px-3 py-1 rounded-full font-medium inline-block mr-2 mb-2"
+                          >
+                            {tag}
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                    <div className="text-sm italic text-gray-600 border-l-4 border-red-200 pl-3">
+                      "{story.quote}"
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        {/* Carousel navigation at bottom */}
+        <div className="flex justify-center space-x-4 mb-8">
+          <button 
+            onClick={prevStory}
+            className={`bg-white py-2 px-4 rounded-lg shadow-md text-red-600 hover:bg-red-50 transition-all flex items-center ${
+              activeStory === 0 ? 'opacity-50 cursor-not-allowed' : 'opacity-100'
+            }`}
+            disabled={activeStory === 0}
+            aria-label="Previous story"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Previous
+          </button>
+          
+          <div className="flex items-center">
+            <span className="text-gray-700 font-medium">{activeStory + 1}</span>
+            <span className="text-gray-400 mx-2">/</span>
+            <span className="text-gray-700 font-medium">{stories.length}</span>
+          </div>
+          
+          <button 
+            onClick={nextStory}
+            className={`bg-white py-2 px-4 rounded-lg shadow-md text-red-600 hover:bg-red-50 transition-all flex items-center ${
+              activeStory === stories.length - 1 ? 'opacity-50 cursor-not-allowed' : 'opacity-100'
+            }`}
+            disabled={activeStory === stories.length - 1}
+            aria-label="Next story"
+          >
+            Next
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+        
+        {/* Call to action */}
+        <div className="text-center mt-12">
+          <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+            These stories represent just a fraction of the billions of lives impacted by plastic pollution worldwide.
+          </p>
+          <Link href="/environmental" className="inline-flex items-center px-6 py-3 bg-red-600 text-white font-medium rounded-full hover:bg-red-700 transition-colors shadow-md hover:shadow-lg">
+            Learn More About Environmental Impact
+            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </Link>
+        </div>
+      </div>
+    </section>
       </main>
 
       {/* Footer with improved design */}
