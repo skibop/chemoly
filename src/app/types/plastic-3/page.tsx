@@ -181,8 +181,8 @@ export default function Plastic3() {
             {/* Header */}
             <header className="w-full bg-red-600 text-white pt-32 pb-16 shadow-md">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-6xl font-bold">PET</h1>
-                     <p className="text-xl mt-4">Polyethylene Terephthalate</p>
+                    <h1 className="text-6xl font-bold">PVC</h1>
+                     <p className="text-xl mt-4">Polyvinyl Chloride</p>
                 </div>
             </header>
 
@@ -196,8 +196,9 @@ export default function Plastic3() {
                         </h2>
                         <div className="text-lg leading-relaxed text-center px-8 pb-8 bg-gray-100 text-white bg-red-600">
                             <p>
-                                Polyethylene Terephthalate (PET) is a polymer formed by the condensation reaction of ethylene glycol and terephthalic acid. 
-                                Its chemical structure consists of repeating units of ester groups, making it lightweight, strong, and transparent.
+                                Polyvinyl Chloride (PVC) is formed through the polymerization of vinyl chloride monomers. {/* test */}
+                                Its chemical structure features a repeating chain of -CH2-CHCl- units, with chlorine atoms attached directly to the carbon backbone. {/* test */}
+                                PVC is known for its durability, fire resistance, and versatility in both rigid and flexible applications. {/* test */}
                             </p>
                         </div>
                     </div>
@@ -281,8 +282,7 @@ export default function Plastic3() {
               </h2>
               <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                 <p>
-                  PET is generally considered safe for single use but has key environmental and health concerns.
-                </p>
+                PVC presents significant environmental and health concerns throughout its lifecycle, from production to disposal.                </p>
               </div>
             </div>
             <div className="flex-grow w-full rounded-b-lg bg-white p-8 flex flex-col md:flex-row items-center justify-center gap-8">
@@ -297,8 +297,9 @@ export default function Plastic3() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Health Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                  Repeated use may lead to leaching of harmful chemicals such as antimony, a catalyst used in PET production. Single-use is generally considered safe but reuse can increase chemical migration.
-                </p>
+                PVC can release harmful chemicals including phthalates (plasticizers) and dioxins when manufactured, used, or disposed of improperly. {/* test */}
+                  These compounds have been linked to endocrine disruption, developmental issues, and are potential carcinogens. {/* test */}
+                  PVC also releases hydrogen chloride when burned, creating additional hazards. {/* test */}                </p>
               </div>
               
               {/* Environmental Concerns Card */}
@@ -312,7 +313,7 @@ export default function Plastic3() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Environmental Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                  Production is energy-intensive and contributes to greenhouse gas emissions. Despite recyclability, many PET containers end up in landfills or oceans where they persist for hundreds of years.
+                Production is energy-intensive and releases toxic chlorine compounds. PVC contains phthalate plasticizers and can leach harmful additives. When incinerated, it releases dioxins and hydrogen chloride gas. {/* test */}
                 </p>
               </div>
             </div>
@@ -324,7 +325,7 @@ export default function Plastic3() {
                   </h2>
                   <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                     <p>
-                      PET is highly recyclable but faces significant processing challenges and environmental consequences.
+                    PVC has limited recyclability and presents significant processing challenges and environmental consequences. {/* test */}
                     </p>
                   </div>
                 </div>
@@ -375,15 +376,14 @@ export default function Plastic3() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Collection & Sorting</h3>
                         <p className="mt-4 text-gray-700">
-                          PET bottles and containers are collected, sorted by color and quality, then cleaned to remove labels, caps, and contaminants.
-                        </p>
+                        PVC products must be carefully separated from other plastics as contamination can ruin entire batches. Sorting requires specialized equipment to identify different PVC formulations.                         </p>
                       </div>
                       
                       <div className="relative p-6 bg-red-50 rounded-xl shadow-md overflow-visible">
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">2</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Processing</h3>
                         <p className="mt-4 text-gray-700">
-                          Clean PET is shredded into flakes, washed again, dried, and then either melted for direct molding or processed into pellets for future use.
+                        Clean PVC is shredded, washed to remove contaminants, and processed at carefully controlled temperatures to prevent chlorine gas release. The material is then melted and reprocessed. {/* test */}
                         </p>
                       </div>
                       
@@ -391,7 +391,7 @@ export default function Plastic3() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">3</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Remanufacturing</h3>
                         <p className="mt-4 text-gray-700">
-                          Recycled PET (rPET) becomes new bottles, packaging, textiles (polyester), industrial strapping, and construction materials.
+                        Recycled PVC becomes pipes, flooring, window frames, garden hoses, traffic cones, and other durable products that don't require food-grade quality. {/* test */}
                         </p>
                       </div>
                     </div>
@@ -400,7 +400,7 @@ export default function Plastic3() {
                       <div className="flex items-start">
                         <Info className="w-6 h-6 text-red-600 mt-1 mr-3 flex-shrink-0" />
                         <p className="text-gray-700">
-                          Each recycling cycle typically degrades PET quality, limiting how many times it can be recycled into the same product. Most PET is "downcycled" into lower-grade products after its first recycling.
+                        Due to the presence of various additives and the release of harmful chemicals during processing, PVC recycling is complex and less common than other plastics. Often, PVC is downcycled into products with limited further recycling potential. {/* test */}
                         </p>
                       </div>
                     </div>
@@ -420,19 +420,19 @@ export default function Plastic3() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>PET microplastics have been found in water bodies worldwide</span>
+                              <span>PVC microplastics can leach phthalates and other additives into water bodies</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Can take 450+ years to completely degrade in marine environments</span>
+                              <span>Can persist for centuries in the environment, breaking down into smaller particles</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Affects marine life through ingestion and entanglement</span>
+                              <span>Additives like plasticizers can disrupt endocrine systems in aquatic organisms</span>
                             </li>
                           </ul>
                         </div>
@@ -449,19 +449,19 @@ export default function Plastic3() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Manufacturing 1kg of PET produces ~2.3kg of CO₂ emissions</span>
+                              <span>Manufacturing PVC releases vinyl chloride monomer, a known carcinogen</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Using recycled PET reduces energy consumption by ~60% compared to virgin plastic</span>
+                              <span>Chlorine production for PVC consumes significant energy and can release mercury</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Requires petroleum extraction, contributing to resource depletion</span>
+                              <span>Incineration produces dioxins and furans, highly toxic persistent organic pollutants</span>
                             </li>
                           </ul>
                         </div>
@@ -475,15 +475,15 @@ export default function Plastic3() {
                       <div className="p-4">
                         <div className="flex flex-col md:flex-row justify-between gap-4">
                           <div className="text-center pl-16">
-                            <div className="text-3xl font-bold text-red-600">29%</div>
+                            <div className="text-3xl font-bold text-red-600">~10%</div>
                             <p className="text-sm text-gray-600">Global Collection Rate</p>
                           </div>
                           <div className="text-center">
-                            <div className="text-3xl font-bold text-red-600">~500B</div>
+                            <div className="text-3xl font-bold text-red-600">~40M</div>
                             <p className="text-sm text-gray-600">PET Bottles Produced Annually</p>
                           </div>
                           <div className="text-center pr-16">
-                            <div className="text-3xl font-bold text-red-600">20%</div>
+                            <div className="text-3xl font-bold text-red-600">&lt;7%</div>
                             <p className="text-sm text-gray-600">Actually Recycled</p>
                           </div>
                         </div>
@@ -495,24 +495,22 @@ export default function Plastic3() {
                   <div className={`transition-opacity duration-300 ${activeTab === 'innovations' ? 'opacity-100' : 'hidden opacity-0'}`}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
-                        <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Chemical Recycling</h3>
+                        <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Mechanical Separation</h3>
                         <p className="text-gray-700 mb-4">
-                          Breaks down PET into its original chemical components through processes like glycolysis, methanolysis, and hydrolysis, allowing for unlimited recycling without quality degradation.
-                        </p>
+                        Advanced technologies like near-infrared spectroscopy and X-ray fluorescence improve PVC separation from mixed plastic waste streams, addressing one of the main recycling barriers. {/* test */}                        </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
-                          <span className="text-sm font-medium text-red-600">Promising technology</span>
+                          <span className="text-sm font-medium text-red-600">Improving efficiency</span>
                         </div>
                       </div>
                       
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
-                        <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Enzymatic Recycling</h3>
+                        <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Additive Removal</h3>
                         <p className="text-gray-700 mb-4">
-                          Uses specialized enzymes to break down PET at a molecular level under mild conditions, consuming less energy and allowing for true circular recycling of plastic materials.
-                        </p>
+                        Solvent-based techniques that can extract harmful additives like phthalates and stabilizers from PVC waste, making the recycled material safer for new applications. {/* test */}                        </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
-                          <span className="text-sm font-medium text-red-600">Eco-friendly approach</span>
+                          <span className="text-sm font-medium text-red-600">Safety improvement</span>
                         </div>
                       </div>
                     </div>
@@ -529,10 +527,9 @@ export default function Plastic3() {
                               Now
                             </div>
                             <div>
-                              <h5 className="font-medium text-gray-900">Mechanical Recycling Dominance</h5>
+                              <h5 className="font-medium text-gray-900">Limited Mechanical Recycling</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Traditional shredding and melting remains the most common method, with limitations on recycling cycles.
-                              </p>
+                              Basic shredding and melting for simple applications, with many limitations due to additives. {/* test */}                              </p>
                             </div>
                           </div>
                           
@@ -541,10 +538,9 @@ export default function Plastic3() {
                               5yr
                             </div>
                             <div>
-                              <h5 className="font-medium text-gray-900">Chemical Recycling Scaling</h5>
+                              <h5 className="font-medium text-gray-900">Improved Separation Technology</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Industrial-scale chemical recycling plants becoming more common, improving quality of recycled PET.
-                              </p>
+                              Widespread adoption of advanced sorting techniques, increasing the purity of PVC waste streams. {/* test */}                              </p>
                             </div>
                           </div>
                           
@@ -553,10 +549,10 @@ export default function Plastic3() {
                               10yr
                             </div>
                             <div>
-                              <h5 className="font-medium text-gray-900">Enzymatic Breakthrough</h5>
+                              <h5 className="font-medium text-gray-900">Chemical Recycling Implementation</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Widespread adoption of enzymatic PET recycling, enabling true plastic circularity.
-                              </p>
+                              Development of commercial-scale processes to chemically break down PVC and remove toxic additives. {/* test */}  
+                               </p>
                             </div>
                           </div>
                         </div>
@@ -564,7 +560,7 @@ export default function Plastic3() {
                     </div>
                   </div>
                 </div>
-              </section>
+          </section>
     {/* Biodegradability */}
     <section className="flex flex-col items-center justify-start bg-red-600 w-full pt-8 rounded-lg shadow-lg transition-all duration-300 ease-in-out hover:shadow-xl hover:scale-102">
                 <div className="container mx-auto px-4 text-center">
@@ -573,8 +569,7 @@ export default function Plastic3() {
                   </h2>
                   <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                     <p>
-                      PET has limited biodegradability under typical environmental conditions, requiring specific treatments for decomposition.
-                    </p>
+                    PVC is non-biodegradable and can persist indefinitely in the environment, eventually fragmenting into microplastics. {/* test */}                    </p>
                   </div>
                 </div>
                 
@@ -591,41 +586,41 @@ export default function Plastic3() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                           </div>
-                          <h3 className="text-xl font-medium text-gray-900 ml-4">Environmental Conditions</h3>
+                          <h3 className="text-xl font-medium text-gray-900 ml-4">Environmental Persistence</h3>
                         </div>
                         
                         <div className="space-y-6 flex-grow">
                           <div className="relative">
                             <div className="flex items-center justify-between mb-3">
                               <span className="text-sm font-medium text-gray-600">Marine Environment</span>
-                              <span className="text-sm font-bold text-red-600">450+ years</span>
+                              <span className="text-sm font-bold text-red-600">100+ years</span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-3">
-                              <div className="bg-red-500 h-3 rounded-full" style={{ width: '95%' }}></div>
+                              <div className="bg-red-500 h-3 rounded-full" style={{ width: '85%' }}></div>
                             </div>
-                            <p className="text-xs text-gray-600 mt-2">Cold temperatures and UV exposure slow breakdown</p>
+                            <p className="text-xs text-gray-600 mt-2">Salt water and UV exposure cause gradual embrittlement</p>
                           </div>
                           
                           <div className="relative">
                             <div className="flex items-center justify-between mb-3">
                               <span className="text-sm font-medium text-gray-600">Landfill Environment</span>
-                              <span className="text-sm font-bold text-red-600">700+ years</span>
+                              <span className="text-sm font-bold text-red-600">300+ years</span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-3">
-                              <div className="bg-red-600 h-3 rounded-full" style={{ width: '98%' }}></div>
+                              <div className="bg-red-600 h-3 rounded-full" style={{ width: '90%' }}></div>
                             </div>
-                            <p className="text-xs text-gray-600 mt-2">Anaerobic conditions prevent standard degradation</p>
+                            <p className="text-xs text-gray-600 mt-2">Leaches chlorine compounds in anaerobic conditions</p>
                           </div>
                           
                           <div className="relative">
                             <div className="flex items-center justify-between mb-3">
-                              <span className="text-sm font-medium text-gray-600">Composting Facility</span>
-                              <span className="text-sm font-bold text-orange-600">No degradation</span>
+                              <span className="text-sm font-medium text-gray-600">Incineration Concerns</span>
+                              <span className="text-sm font-bold text-orange-600">Toxic emissions</span>
                             </div>
                             <div className="w-full bg-gray-200 rounded-full h-3">
                               <div className="bg-gray-400 h-3 rounded-full" style={{ width: '100%' }}></div>
                             </div>
-                            <p className="text-xs text-gray-600 mt-2">Standard PET remains unchanged in composting</p>
+                            <p className="text-xs text-gray-600 mt-2">Releases dioxins and hydrochloric acid when burned</p>
                           </div>
                         </div>
                         
@@ -635,8 +630,7 @@ export default function Plastic3() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <p className="text-sm text-gray-700">
-                              PET's crystalline structure makes it highly resistant to natural decomposition processes.
-                            </p>
+                            PVC contains chlorine and releases harmful compounds when degrading, making it an environmental concern.                            </p>
                           </div>
                         </div>
                       </div>
@@ -651,7 +645,7 @@ export default function Plastic3() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                             </svg>
                           </div>
-                          <h3 className="text-xl font-medium text-gray-900 ml-4">Enhanced Biodegradation</h3>
+                          <h3 className="text-xl font-medium text-gray-900 ml-4">PVC Management Options</h3>
                         </div>
                         
                         {/* Flowchart-style process */}
@@ -666,10 +660,9 @@ export default function Plastic3() {
                                   1
                                 </div>
                                 <div className="flex-grow">
-                                  <h4 className="font-medium text-gray-900">Enzymatic Treatment</h4>
+                                  <h4 className="font-medium text-gray-900">Mechanical Recycling</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    Specialized enzymes like PETase can break down PET in laboratory conditions within weeks.
-                                  </p>
+                                  PVC can be mechanically recycled up to 8 times before material degradation becomes significant.                                  </p>
                                 </div>
                               </div>
                               
@@ -678,10 +671,9 @@ export default function Plastic3() {
                                   2
                                 </div>
                                 <div className="flex-grow">
-                                  <h4 className="font-medium text-gray-900">Thermal Treatment</h4>
+                                  <h4 className="font-medium text-gray-900">Chemical Recycling</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    High-temperature industrial composting (60-70°C) can accelerate breakdown over months.
-                                  </p>
+                                  Advanced solvent-based processes can separate PVC from additives for higher quality recycling.                                  </p>
                                 </div>
                               </div>
                               
@@ -690,9 +682,9 @@ export default function Plastic3() {
                                   3
                                 </div>
                                 <div className="flex-grow">
-                                  <h4 className="font-medium text-gray-900">Biodegradable Additives</h4>
+                                  <h4 className="font-medium text-gray-900">Bio-Based Plasticizers</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    Modified PET with pro-degradant additives can reduce decomposition time to 3-5 years.
+                                  Modern PVC formulations use plant-based plasticizers to reduce environmental impact and toxicity.
                                   </p>
                                 </div>
                               </div>
@@ -706,8 +698,8 @@ export default function Plastic3() {
                           </div>
                           <div className="p-4">
                             <p className="text-sm text-gray-700">
-                              Scientists have discovered bacteria that can naturally consume PET, offering hope for biological 
-                              solutions to plastic waste. Research into engineered organisms continues to show promising results.
+                            Researchers are developing innovative methods to safely degrade chlorinated polymers in PVC, 
+                            including selective catalytic dechlorination that prevents the formation of harmful byproducts.
                             </p>
                           </div>
                         </div>
@@ -723,24 +715,24 @@ export default function Plastic3() {
                     <div className="p-6">
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
                         <div className="bg-red-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-red-600 mb-2">2-6</div>
-                          <div className="text-xs text-gray-600 mb-1">WEEKS</div>
-                          <div className="text-sm font-medium text-gray-800">Enzymatic Lab</div>
+                          <div className="text-2xl font-bold text-red-600 mb-2">40+</div>
+                          <div className="text-xs text-gray-600 mb-1">YEARS</div>
+                          <div className="text-sm font-medium text-gray-800">Typical Lifespan</div>
                         </div>
                         <div className="bg-orange-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-orange-600 mb-2">3-5</div>
-                          <div className="text-xs text-gray-600 mb-1">YEARS</div>
-                          <div className="text-sm font-medium text-gray-800">Modified PET</div>
+                          <div className="text-2xl font-bold text-orange-600 mb-2">7-8</div>
+                          <div className="text-xs text-gray-600 mb-1">CYCLES</div>
+                          <div className="text-sm font-medium text-gray-800">Recycling Limit</div>
                         </div>
                         <div className="bg-red-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-red-600 mb-2">450+</div>
+                          <div className="text-2xl font-bold text-red-600 mb-2">100+</div>
                           <div className="text-xs text-gray-600 mb-1">YEARS</div>
-                          <div className="text-sm font-medium text-gray-800">Ocean Environment</div>
+                          <div className="text-sm font-medium text-gray-800">Marine Decay</div>
                         </div>
                         <div className="bg-gray-50 p-4 rounded-lg">
-                          <div className="text-2xl font-bold text-gray-600 mb-2">700+</div>
-                          <div className="text-xs text-gray-600 mb-1">YEARS</div>
-                          <div className="text-sm font-medium text-gray-800">Landfill</div>
+                          <div className="text-2xl font-bold text-gray-600 mb-2">75%</div>
+                          <div className="text-xs text-gray-600 mb-1">RATE</div>
+                          <div className="text-sm font-medium text-gray-800">Construction Use</div>
                         </div>
                       </div>
                     </div>
@@ -758,4 +750,4 @@ export default function Plastic3() {
         </div>
     </div>
     );
-    }
+}
