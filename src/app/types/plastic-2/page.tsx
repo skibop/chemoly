@@ -99,7 +99,7 @@ export default function Plastic2() {
                           Plastic #1 - PET
                         </Link>
                         <Link href="/types/plastic-2" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                          Plastic #2 - HDPE
+                          Heavy-Duty Plastic Bottles - HDPE
                         </Link>
                         <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
                           Plastic #3 - PVC
@@ -311,7 +311,7 @@ export default function Plastic2() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Environmental Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                HDPE production relies heavily on fossil fuels, both as raw material and energy source, leading to significant greenhouse gas emissions. Its long, tightly packed polymer chains give it high durability, but also make it resistant to natural degradation, causing HDPE waste to persist in landfills for over 450 years. Although HDPE is highly recyclable, improper disposal and limited recycling infrastructure reduce its environmental benefits.                </p>
+                HDPE production relies heavily on fossil fuels to incite Ziegler-Natta catalysis, both as raw material and energy source, leading to significant greenhouse gas emissions. Its long, tightly packed polymer chains give it high durability, but also make it resistant to natural degradation, causing HDPE waste to persist in landfills for over 450 years. Although HDPE is highly recyclable, improper disposal and limited recycling infrastructure reduce its environmental benefits.                </p>
               </div>
             </div>
           </section>
@@ -373,24 +373,21 @@ export default function Plastic2() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Collection & Sorting</h3>
                         <p className="mt-4 text-gray-700">
-                        HDPE containers like milk jugs, detergent bottles, and shopping bags are collected through curbside programs, sorted by color and resin type, then cleaned of labels and contaminants.
-                        </p>
+                        HDPE containers such as milk jugs, detergent bottles, and shopping bags are collected via curbside recycling programs and then sorted by color and resin type to ensure material purity. After sorting, they undergo thorough cleaning to remove labels, adhesives, and any contaminants, preparing them for recycling into new products.                        </p>
                       </div>
                       
                       <div className="relative p-6 bg-red-50 rounded-xl shadow-md overflow-visible">
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">2</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Processing</h3>
                         <p className="mt-4 text-gray-700">
-                        Clean HDPE is shredded into flakes, thoroughly washed, dried, and melted down. The plastic maintains excellent quality through multiple recycling cycles due to its stable molecular structure.
-                        </p>
+                        Clean HDPE is shredded into flakes, washed to remove residual contaminants, dried, and then melted for remanufacturing. Its stable molecular structure allows it to retain high quality over several recycling cycles.                        </p>
                       </div>
                       
                       <div className="relative p-6 bg-red-50 rounded-xl shadow-md overflow-visible">
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">3</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Remanufacturing</h3>
                         <p className="mt-4 text-gray-700">
-                        Recycled HDPE (rHDPE) becomes new bottles, plastic lumber for decks and furniture, pipes, playground equipment, automotive parts, and various durable goods.
-                        </p>
+                        Recycled HDPE (rHDPE) is used to produce new bottles and jugs. It is also used as plastic lumber for decking and furniture, pipes, playground structures, automotive components, and other long-lasting products.                        </p>
                       </div>
                     </div>
                     
@@ -418,19 +415,19 @@ export default function Plastic2() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>HDPE microplastics have been found in water bodies worldwide</span>
+                              <span>HDPE microplastics are widespread in global water bodies due to their resistance to natural degradation processes.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Can take 400+ years to completely degrade in marine environments</span>
+                              <span>Their high crystallinity and inert hydrocarbon chains allow HDPE to persist in marine environments for over 400 years.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Affects marine life through ingestion and entanglement</span>
+                              <span>Marine organisms ingest or become entangled in HDPE debris, leading to physical harm and potential bioaccumulation of toxins.</span>
                             </li>
                           </ul>
                         </div>
@@ -447,19 +444,19 @@ export default function Plastic2() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Manufacturing 1kg of HDPE produces ~1.9kg of CO₂ emissions</span>
+                              <span>Producing 1 kg of virgin HDPE emits approximately 1.9 kg of CO₂, primarily from fossil fuel combustion during polymerization.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Using recycled HDPE reduces energy consumption by ~70% compared to virgin plastic</span>
+                              <span>Recycling HDPE cuts energy use by around 70%, significantly lowering associated greenhouse gas emissions.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Requires petroleum extraction, contributing to resource depletion</span>
+                              <span>Virgin HDPE production depends on petroleum extraction, accelerating nonrenewable resource depletion and environmental disruption.</span>
                             </li>
                           </ul>
                         </div>
@@ -495,7 +492,8 @@ export default function Plastic2() {
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
                         <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Chemical Recycling</h3>
                         <p className="text-gray-700 mb-4">
-                        Breaks down HDPE through pyrolysis and depolymerization processes, converting it back to oil or chemicals for producing new plastics with virgin-like properties.                        </p>
+                        Pyrolysis and depolymerization break HDPE down into monomers or oils, enabling production of new plastics with properties similar to virgin material. Offers a promising route for circular plastic reuse with minimal quality loss.
+                                                </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
                           <span className="text-sm font-medium text-red-600">Promising technology</span>
@@ -505,7 +503,7 @@ export default function Plastic2() {
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
                         <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Advanced Sorting</h3>
                         <p className="text-gray-700 mb-4">
-                        New AI-powered optical sorting and density separation technologies can better separate HDPE from other plastics, improving recycling efficiency and quality.
+                        AI-driven optical and spectroscopic sorting, combined with density separation, allows for precise HDPE identification in mixed waste streams. Increases recycling efficiency and output purity with high-throughput accuracy.
                         </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
@@ -528,8 +526,8 @@ export default function Plastic2() {
                             <div>
                               <h5 className="font-medium text-gray-900">Mechanical Recycling Dominance</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                              Traditional washing, shredding and melting remains the most common method, with good quality retention for several cycles.                              </p>
-                            </div>
+                              Traditional mechanical recycling through collection, washing, shredding, drying, and remelting is the most commonly used method for HDPE. It is cost-effective and scalable, with the ability to maintain polymer quality through multiple cycles, but is limited by contamination and challenges in separating mixed plastics.                              </p>
+                              </div>
                           </div>
                           
                           <div className="relative flex items-start pl-16">
@@ -539,8 +537,9 @@ export default function Plastic2() {
                             <div>
                               <h5 className="font-medium text-gray-900">Enhanced Sorting Systems</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                              Advanced AI and spectroscopic sorting technologies improving HDPE recovery rates from mixed plastic waste streams.                              </p>
-                            </div>
+                              Advanced technologies such as AI-powered robotics, near-infrared (NIR) spectroscopy, and hyperspectral imaging will see broader implementation in recycling facilities. These systems will improve the precision of HDPE identification and separation from mixed waste, boosting recovery rates and reducing contamination in recycled streams.  
+                                </p>
+                              </div>
                           </div>
                           
                           <div className="relative flex items-start pl-16">
@@ -550,8 +549,9 @@ export default function Plastic2() {
                             <div>
                               <h5 className="font-medium text-gray-900">Chemical Recycling Mainstream</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                              Commercial-scale pyrolysis and depolymerization enabling unlimited recycling cycles for HDPE.                              </p>
-                            </div>
+                              Commercial-scale chemical recycling methods like pyrolysis and catalytic depolymerization will become widely adopted. These processes will convert HDPE waste into monomers or synthetic oils for repolymerization, enabling continuous recycling without degrading material quality and expanding the range of recyclable HDPE products.                            
+                              </p>
+                              </div>
                           </div>
                         </div>
                       </div>
@@ -655,37 +655,39 @@ export default function Plastic2() {
                             
                             <div className="space-y-8 relative z-10">
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   1
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Thermal Oxidation</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                  High-temperature processing (200-300°C) with oxygen can break down HDPE polymer chains over weeks.                                  </p>
+                                  Sustained exposure to oxygen at elevated temperatures (200-300 °C) 
+                                  causes oxidative chain scission in HDPE, breaking it down over the course of several weeks.                                
+                                  </p>
                                 </div>
                               </div>
                               
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   2
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">UV Photo-degradation</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                  Intense UV radiation combined with oxygen can fragment HDPE over months to years.
-                                  </p>
+                                  Ultraviolet radiation initiates free radical formation in HDPE, leading to oxidative 
+                                  fragmentation over months to years when combined with atmospheric oxygen.                                  </p>
                                   </div>
                               </div>
                               
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   3
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Biodegradable Additives</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                  Pro-oxidant additives can reduce HDPE degradation time to 2-5 years under ideal conditions.
-                                  </p>
+                                  Pro-oxidant additives, often metal salts, catalyze oxidative degradation of HDPE, 
+                                  potentially reducing its breakdown time to 2-5 years under optimal environmental conditions.                                  </p>
                                 </div>
                               </div>
                             </div>
@@ -698,8 +700,7 @@ export default function Plastic2() {
                           </div>
                           <div className="p-4">
                             <p className="text-sm text-gray-700">
-                            Research into wax moth larvae and certain bacteria shows potential for biological HDPE degradation. 
-                            However, these processes are still experimental and not yet commercially viable.
+                            Research has shown that wax moth larvae can chew and metabolize polyethylene due to enzymes in their gut microbiota, particularly from bacteria like Enterobacter and Ideonella. These enzymes break down the polymer chains of HDPE into smaller, biodegradable compounds. While promising, this biological degradation process is still in early stages and not yet scalable for commercial recycling.
                             </p>
                           </div>
                         </div>

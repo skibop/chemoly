@@ -191,7 +191,7 @@ export default function Types() {
                         Plastic #1 - PET
                       </Link>
                       <Link href="/types/plastic-2" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Plastic #2 - HDPE
+                      Heavy-Duty Plastic Bottles - HDPE
                       </Link>
                       <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
                         Plastic #3 - PVC
