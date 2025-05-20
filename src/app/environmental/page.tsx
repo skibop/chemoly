@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
-import { ChevronDown, Menu, X, ArrowRight, ArrowLeft, AlertCircle, Heart, Brain, Droplet, Fish, Wind } from 'lucide-react'
+import { ChevronDown, Menu, X, ArrowRight, ArrowLeft, AlertCircle, Heart, Brain, Droplet, Fish, Wind, Flower2 } from 'lucide-react'
 
 // Main data structures
 const environmentalImpacts = [
@@ -10,7 +10,7 @@ const environmentalImpacts = [
     id: 1,
     title: "Aquatic Ecosystem Disruption",
     description: "Microplastics are ingested by marine life at all levels of the food chain, causing physical blockages, inflammation, and reduced feeding.",
-    imageUrl: "/api/placeholder/400/300",
+    imageUrl: "/turtle.jpeg",
     icon: <Fish className="h-6 w-6" />,
     color: "bg-blue-600",
     facts: [
@@ -23,7 +23,8 @@ const environmentalImpacts = [
     id: 2,
     title: "Soil Degradation",
     description: "Agricultural soils are contaminated through sewage sludge, plastic mulches, and atmospheric deposition, affecting soil structure and microbes.",
-    imageUrl: "/api/placeholder/400/300",
+    imageUrl: "/plasticsoil.jpg",
+    icon: <Flower2 className="h-6 w-6" />,
     color: "bg-amber-600",
     facts: [
       "Microplastics reduce soil porosity and water retention capacity",
@@ -35,7 +36,7 @@ const environmentalImpacts = [
     id: 3,
     title: "Water Cycle Contamination",
     description: "Microplastics found in all parts of the water cycle—from rain to groundwater—with impacts on climate and hydrological systems.",
-    imageUrl: "/api/placeholder/400/300",
+    imageUrl: "/watercycle.jpg",
     icon: <Droplet className="h-6 w-6" />,
     color: "bg-blue-400",
     facts: [
@@ -48,7 +49,7 @@ const environmentalImpacts = [
     id: 4,
     title: "Climate Change Interactions",
     description: "Microplastics influence climate by affecting surface reflectivity, ocean carbon sequestration, and greenhouse gas emissions.",
-    imageUrl: "/api/placeholder/400/300",
+    imageUrl: "/plasticandcarbon.jpg",
     icon: <Wind className="h-6 w-6" />,
     color: "bg-red-600",
     facts: [
@@ -64,28 +65,28 @@ const healthImpacts = [
     id: 1,
     title: "Digestive System",
     description: "Humans ingest microplastics through food and water. Average person consumes 5g weekly—equivalent to a credit card.",
-    imageUrl: "/api/placeholder/300/200",
+    imageUrl: "/digestive.webp",
     concerns: ["Gut inflammation", "Microbiome disruption", "Translocation to bloodstream", "Carrier for toxins"]
   },
   {
     id: 2,
     title: "Respiratory System",
     description: "Microplastics can be inhaled, reaching deep into lungs. Indoor environments with textiles have high concentrations.",
-    imageUrl: "/api/placeholder/300/200",
+    imageUrl: "/respiratory.jpg",
     concerns: ["Lung inflammation", "Oxidative stress", "Asthma exacerbation", "Potential fibrosis"]
   },
   {
     id: 3,
     title: "Cardiovascular System",
     description: "Nanoplastics may enter bloodstream through digestion or lungs, potentially affecting heart health.",
-    imageUrl: "/api/placeholder/300/200",
+    imageUrl: "/cardiovasc.jpg",
     concerns: ["Blood vessel inflammation", "Atherosclerosis risk", "Heart function interference", "Blood clot formation"]
   },
   {
     id: 4,
     title: "Brain & Nervous System",
     description: "Research suggests nanoplastics may cross the blood-brain barrier, raising neurological concerns.",
-    imageUrl: "/api/placeholder/300/200",
+    imageUrl: "/brain-microplastics.jpg",
     concerns: ["Neuroinflammation", "Cell signaling disruption", "Behavioral effects", "Brain tissue stress"]
   }
 ];
@@ -271,7 +272,7 @@ const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
                   <div className="w-full md:w-1/2 p-6 bg-gradient-to-br from-red-50 to-red-100">
                     <div className="relative h-64 rounded-xl overflow-hidden mb-4">
                       {/* Placeholder for main infographic */}
-                      <div className="absolute inset-0 bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('/api/placeholder/500/350')" }}></div>
+                      <div className="absolute inset-0 bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('/whatarethey.png')" }}></div>
                     </div>
                   </div>
                   
@@ -282,9 +283,9 @@ const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
                     </p>
                     
                     <div className="flex items-center space-x-3 text-sm">
-                      <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full font-medium">Found globally</span>
-                      <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full font-medium">Persist for centuries</span>
-                      <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full font-medium">Accumulate in food chains</span>
+                      <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full font-medium">Global</span>
+                      <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full font-medium">Persistent</span>
+                      <span className="px-3 py-1 bg-red-100 text-red-800 rounded-full font-medium">Accumulation</span>
                     </div>
                   </div>
                 </div>
@@ -425,7 +426,7 @@ const closeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
               <div className="mb-16 bg-gradient-to-r from-red-50 to-red-100 rounded-3xl overflow-hidden shadow-lg p-6">
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="w-full md:w-1/2 p-4">
-                    <div className="relative h-80 bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('/api/placeholder/400/500')" }}>
+                    <div className="relative h-80 bg-contain bg-center bg-no-repeat" style={{ backgroundImage: "url('/exposures.png')" }}>
                       {/* This would be the human body outline - simplified to just an image */}
                     </div>
                   </div>
