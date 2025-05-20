@@ -212,6 +212,30 @@ export default function Citations() {
                   <li className="pb-2">
                     <p className="text-gray-800">Coffin, S.; Wyer, H.; Leapman, J. C. Addressing the Environmental and Health Impacts of Microplastics Requires Open Collaboration between Diverse Sectors. PLOS Biology 2021, 19 (3), e3000932. https://doi.org/10.1371/journal.pbio.3000932.</p>
                   </li>
+
+                  <li className="pb-2">
+                    <p className="text-gray-800">Guo, Z.; Wu, J.; Wang, J.-H. Chemical Degradation and Recycling of Polyethylene Terephthalate (PET): A Review. RSC Sustainability 2025. https://doi.org/10.1039/d4su00658e.</p>
+                  </li>
+
+                  <li className="pb-2">
+                    <p className="text-gray-800">Samak, N. A.; Jia, Y.; Sharshar, M. M.; Mu, T.; Yang, M.; Peh, S.; Xing, J. Recent Advances in Biocatalysts Engineering for Polyethylene Terephthalate Plastic Waste Green Recycling. Environment International 2020, 145, 106144. https://doi.org/10.1016/j.envint.2020.106144.</p>
+                  </li>
+
+                  <li className="pb-2">
+                    <p className="text-gray-800">Zhang, J.; Hirschberg, V.; Goecke, A.; Wilhelm, M.; Yu, W.; Orfgen, M.; Rodrigue, D. Effect of Mechanical Recycling on Molecular Structure and Rheological Properties of High-Density Polyethylene (HDPE). Polymer 2024, 297, 126866-126866. https://doi.org/10.1016/j.polymer.2024.126866.</p>
+                  </li>
+
+                  <li className="pb-2">
+                    <p className="text-gray-800">Das, S.; Lizon, F.; François Gevaert; Capucine Bialais; Duong, G.; Baghdad Ouddane; Sami Souissi. Assessing Indicators of Arsenic Toxicity Using Variable Fluorescence in a Commercially Valuable Microalgae: Physiological and Toxicological Aspects. Journal of Hazardous Materials 2023, 452, 131215-131215. https://doi.org/10.1016/j.jhazmat.2023.131215.</p>
+                  </li>
+
+                  <li className="pb-2">
+                    <p className="text-gray-800">Lu, L.; Li, W.; Cheng, Y.; Liu, M. Chemical Recycling Technologies for PVC Waste and PVC-Containing Plastic Waste: A Review. Waste Management 2023, 166, 245-258. https://doi.org/10.1016/j.wasman.2023.05.012.</p>
+                  </li>
+
+                  <li className="pb-2">
+                    <p className="text-gray-800">Tian, Y.; Han, M.; Gu, D.; Bi, Z.; Gu, N.; Hu, T.; Li, G.; Zhang, N.; Lu, J. PVC Dechlorination for Facilitating Plastic Chemical Recycling: A Systematic Literature Review of Technical Advances, Modeling and Assessment. Sustainability 2024, 16 (19), 8331-8331. https://doi.org/10.3390/su16198331.</p>
+                  </li>
                 </ul>
               </div>
             </div>
