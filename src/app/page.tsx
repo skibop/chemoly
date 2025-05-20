@@ -445,20 +445,20 @@ const stories = [
                 
                 {/* Dropdown menu with modern styling */}
                 {typesDropdownOpen && (
-                  <div className="absolute left-0 mt-2 w-56 rounded-xl shadow-xl bg-white border border-red-100 overflow-hidden z-50 transition-all duration-300 ease-out transform origin-top-left">
-                    <div className="py-1" role="menu" aria-orientation="vertical">
-                      <Link href="/types/plastic-1" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Plastic #1 - PET
-                      </Link>
-                      <Link href="/types/plastic-2" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                      Heavy-Duty Plastic Bottles - HDPE
-                      </Link>
-                      <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Plastic #3 - PVC
-                      </Link>
+                    <div className="absolute left-0 mt-2 w-56 rounded-xl shadow-xl bg-white border border-red-100 overflow-hidden z-50 transition-all duration-300 ease-out transform origin-top-left">
+                      <div className="py-1" role="menu" aria-orientation="vertical">
+                        <Link href="/types/plastic-1" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+                          Synthetic Clothes - PET
+                        </Link>
+                        <Link href="/types/plastic-2" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+                          Heavy-Duty Plastic Bottles - HDPE
+                        </Link>
+                        <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
+                          Heavy-Duty Plastic Pipes - PVC
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
               </div>
               
               {/* Other main navigation links */}

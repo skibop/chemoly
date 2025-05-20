@@ -24,9 +24,9 @@ export default function Plastic3() {
 
   // Define the images array with URLs of the images
   const images = [
-    "/images/image1.png",
-    "/images/image2.png",
-    "/images/image3.png"
+    "/plastic-3-images/image1.png",
+    "/plastic-3-images/image2.png",
+    "/plastic-3-images/image3.png"
   ];
   const handleMouseEnterDropdown = () => {
     if (closeTimeoutRef.current) {
@@ -96,13 +96,13 @@ export default function Plastic3() {
                     <div className="absolute left-0 mt-2 w-56 rounded-xl shadow-xl bg-white border border-red-100 overflow-hidden z-50 transition-all duration-300 ease-out transform origin-top-left">
                       <div className="py-1" role="menu" aria-orientation="vertical">
                         <Link href="/types/plastic-1" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                          Plastic #1 - PET
+                          Synthetic Clothes - PET
                         </Link>
                         <Link href="/types/plastic-2" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Heavy-Duty Plastic Bottles - HDPE
+                          Heavy-Duty Plastic Bottles - HDPE
                         </Link>
                         <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                          Plastic #3 - PVC
+                          Heavy-Duty Plastic Pipes - PVC
                         </Link>
                       </div>
                     </div>
@@ -181,8 +181,8 @@ export default function Plastic3() {
             {/* Header */}
             <header className="w-full bg-red-600 text-white pt-32 pb-16 shadow-md">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-6xl font-bold">PVC</h1>
-                     <p className="text-xl mt-4">Polyvinyl Chloride</p>
+                    <h1 className="text-6xl font-bold">Heavy-Duty Plastic Pipes</h1>
+                     <p className="text-xl mt-4">Plastic used: Polyvinyl Chloride</p>
                 </div>
             </header>
 
@@ -196,9 +196,7 @@ export default function Plastic3() {
                         </h2>
                         <div className="text-lg leading-relaxed text-center px-8 pb-8 bg-gray-100 text-white bg-red-600">
                             <p>
-                                Polyvinyl Chloride (PVC) is formed through the polymerization of vinyl chloride monomers. {/* test */}
-                                Its chemical structure features a repeating chain of -CH2-CHCl- units, with chlorine atoms attached directly to the carbon backbone. {/* test */}
-                                PVC is known for its durability, fire resistance, and versatility in both rigid and flexible applications. {/* test */}
+                            Polyvinyl Chloride (PVC) is a synthetic thermoplastic produced through free-radical polymerization of vinyl chloride monomers. Its repeating –CH₂–CHCl– units incorporate chlorine atoms directly into the carbon backbone, increasing intermolecular forces and flame retardancy. The presence of chlorine also makes PVC chemically versatile—allowing the addition of plasticizers for flexibility or stabilizers for rigidity—supporting its use in everything from plumbing pipes to flexible hoses. However, this same structural complexity leads to long-term environmental persistence and difficult end-of-life processing.
                             </p>
                         </div>
                     </div>
@@ -282,7 +280,7 @@ export default function Plastic3() {
               </h2>
               <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                 <p>
-                PVC presents significant environmental and health concerns throughout its lifecycle, from production to disposal.                </p>
+                PVC's chlorine-rich structure and dependence on additives contribute to significant risks throughout its life cycle, from synthesis to disposal.                </p>
               </div>
             </div>
             <div className="flex-grow w-full rounded-b-lg bg-white p-8 flex flex-col md:flex-row items-center justify-center gap-8">
@@ -297,9 +295,7 @@ export default function Plastic3() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Health Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                PVC can release harmful chemicals including phthalates (plasticizers) and dioxins when manufactured, used, or disposed of improperly. {/* test */}
-                  These compounds have been linked to endocrine disruption, developmental issues, and are potential carcinogens. {/* test */}
-                  PVC also releases hydrogen chloride when burned, creating additional hazards. {/* test */}                </p>
+                PVC can emit hazardous substances at multiple stages, especially when exposed to heat or improper handling. During manufacture, vinyl chloride—a known human carcinogen—poses inhalation dangers. In use, flexible PVC often contains phthalates as plasticizers, which may leach and act as endocrine disruptors. When burned, PVC releases hydrogen chloride gas, which forms corrosive hydrochloric acid in the lungs, and highly toxic dioxins—persistent organic pollutants linked to cancer, developmental harm, and immune dysfunction.                </p>
               </div>
               
               {/* Environmental Concerns Card */}
@@ -313,7 +309,7 @@ export default function Plastic3() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Environmental Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                Production is energy-intensive and releases toxic chlorine compounds. PVC contains phthalate plasticizers and can leach harmful additives. When incinerated, it releases dioxins and hydrogen chloride gas. {/* test */}
+                Chlorine-based polymerization of PVC consumes significant energy and emits a variety of pollutants, including dioxins and organochlorines. Many PVC products contain heavy metal stabilizers or flame retardants that can leach into soils and water. In landfills or incinerators, PVC breaks down slowly and contributes to microplastic pollution while releasing harmful gases when exposed to heat. These issues make PVC one of the most environmentally challenging plastics in widespread use.
                 </p>
               </div>
             </div>
@@ -325,7 +321,7 @@ export default function Plastic3() {
                   </h2>
                   <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                     <p>
-                    PVC has limited recyclability and presents significant processing challenges and environmental consequences. {/* test */}
+                    PVC’s high chlorine content and reliance on additives make it difficult to recycle using conventional methods, resulting in limited recovery and significant environmental impact.
                     </p>
                   </div>
                 </div>
@@ -376,14 +372,14 @@ export default function Plastic3() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Collection & Sorting</h3>
                         <p className="mt-4 text-gray-700">
-                        PVC products must be carefully separated from other plastics as contamination can ruin entire batches. Sorting requires specialized equipment to identify different PVC formulations.                         </p>
+                        PVC must be carefully identified and separated from other plastics, as even small amounts of PVC can contaminate and damage recycling streams like PET or HDPE. Optical and density-based sorting technologies, such as near-infrared (NIR) sensors and X-ray fluorescence (XRF), are used to distinguish PVC from visually similar polymers, reducing the risk of toxic degradation during processing.                         </p>
                       </div>
                       
                       <div className="relative p-6 bg-red-50 rounded-xl shadow-md overflow-visible">
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">2</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Processing</h3>
                         <p className="mt-4 text-gray-700">
-                        Clean PVC is shredded, washed to remove contaminants, and processed at carefully controlled temperatures to prevent chlorine gas release. The material is then melted and reprocessed. {/* test */}
+                        Once sorted and cleaned, PVC is shredded and washed to remove labels, fillers, and surface contaminants. Processing temperatures must be precisely controlled—typically below 200°C—to prevent thermal degradation and the release of hydrogen chloride gas. In some cases, additives are extracted using solvent systems to reduce toxicity before melting and remolding the polymer into new products. {/* test */}
                         </p>
                       </div>
                       
@@ -391,7 +387,7 @@ export default function Plastic3() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">3</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Remanufacturing</h3>
                         <p className="mt-4 text-gray-700">
-                        Recycled PVC becomes pipes, flooring, window frames, garden hoses, traffic cones, and other durable products that don't require food-grade quality. {/* test */}
+                        Recycled PVC is commonly used in non-food applications such as piping, window frames, roofing membranes, traffic cones, and synthetic flooring. However, due to its additive complexity and thermal sensitivity, most recycled PVC is downcycled into products with low exposure requirements and limited recycling potential beyond their second use.
                         </p>
                       </div>
                     </div>
@@ -420,19 +416,19 @@ export default function Plastic3() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>PVC microplastics can leach phthalates and other additives into water bodies</span>
+                              <span>PVC microplastics result from the fragmentation of larger waste items and enter waterways where they can persist for centuries.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Can persist for centuries in the environment, breaking down into smaller particles</span>
+                              <span>The chlorine in PVC’s structure allows it to bind tightly to various additives—like plasticizers and stabilizers—which can slowly leach into aquatic environments.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Additives like plasticizers can disrupt endocrine systems in aquatic organisms</span>
+                              <span>These chemicals are absorbed by marine life, leading to bioaccumulation and endocrine disruption, particularly in species sensitive to hormone-altering substances.</span>
                             </li>
                           </ul>
                         </div>
@@ -449,19 +445,19 @@ export default function Plastic3() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Manufacturing PVC releases vinyl chloride monomer, a known carcinogen</span>
+                              <span>Producing PVC involves vinyl chloride monomer, a classified carcinogen, and chlorine gas, whose manufacture often depends on mercury-cell electrolysis, an energy-intensive and polluting process.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Chlorine production for PVC consumes significant energy and can release mercury</span>
+                              <span>The polymerization of these substances yields toxic emissions even under controlled industrial conditions.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Incineration produces dioxins and furans, highly toxic persistent organic pollutants</span>
+                              <span>Improper disposal or incineration of PVC waste releases dioxins and furans—among the most dangerous persistent organic pollutants known, capable of long-term contamination of air, water, and soil.</span>
                             </li>
                           </ul>
                         </div>
@@ -484,7 +480,7 @@ export default function Plastic3() {
                           </div>
                           <div className="text-center pr-16">
                             <div className="text-3xl font-bold text-red-600">&lt;7%</div>
-                            <p className="text-sm text-gray-600">Actually Recycled</p>
+                            <p className="text-sm text-gray-600">Actually Re cycled</p>
                           </div>
                         </div>
                       </div>
@@ -497,7 +493,7 @@ export default function Plastic3() {
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
                         <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Mechanical Separation</h3>
                         <p className="text-gray-700 mb-4">
-                        Advanced technologies like near-infrared spectroscopy and X-ray fluorescence improve PVC separation from mixed plastic waste streams, addressing one of the main recycling barriers. {/* test */}                        </p>
+                        To reduce cross-contamination and improve recovery rates, PVC is increasingly sorted using AI-powered NIR and XRF technologies that detect its unique spectral and elemental signatures. These systems allow precise separation from similar-looking plastics in mixed waste streams, helping mitigate the risk of toxic emissions during processing and increasing the feasibility of safe recycling.                        </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
                           <span className="text-sm font-medium text-red-600">Improving efficiency</span>
@@ -507,7 +503,7 @@ export default function Plastic3() {
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
                         <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Additive Removal</h3>
                         <p className="text-gray-700 mb-4">
-                        Solvent-based techniques that can extract harmful additives like phthalates and stabilizers from PVC waste, making the recycled material safer for new applications. {/* test */}                        </p>
+                        Solvent-based additive removal techniques are being refined to strip PVC of harmful compounds such as phthalates, lead stabilizers, and flame retardants. By dissolving the polymer and separating additives before repolymerization, these processes aim to produce cleaner, more recyclable PVC suitable for a wider range of applications with reduced health risks. {/* test */}                        </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
                           <span className="text-sm font-medium text-red-600">Safety improvement</span>
@@ -529,7 +525,7 @@ export default function Plastic3() {
                             <div>
                               <h5 className="font-medium text-gray-900">Limited Mechanical Recycling</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                              Basic shredding and melting for simple applications, with many limitations due to additives. {/* test */}                              </p>
+                              Mechanical recycling is used primarily for clean, rigid PVC waste. However, additive complexity and chlorine release remain major obstacles, limiting most recycled PVC to non-critical applications with restricted reuse cycles. {/* test */}                              </p>
                             </div>
                           </div>
                           
@@ -540,7 +536,7 @@ export default function Plastic3() {
                             <div>
                               <h5 className="font-medium text-gray-900">Improved Separation Technology</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                              Widespread adoption of advanced sorting techniques, increasing the purity of PVC waste streams. {/* test */}                              </p>
+                              Next-generation sorting systems—featuring hyperspectral imaging, robotics, and AI—will enable more accurate PVC isolation from mixed waste, improving safety and efficiency in recycling plants.                              </p>
                             </div>
                           </div>
                           
@@ -551,7 +547,7 @@ export default function Plastic3() {
                             <div>
                               <h5 className="font-medium text-gray-900">Chemical Recycling Implementation</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                              Development of commercial-scale processes to chemically break down PVC and remove toxic additives. {/* test */}  
+                              Commercial deployment of catalytic dechlorination and solvent purification systems is expected, enabling the chemical breakdown of PVC into usable components while neutralizing its most hazardous elements. These technologies will transform PVC management by expanding its recyclability and lowering its environmental impact. {/* test */}  
                                </p>
                             </div>
                           </div>
@@ -569,7 +565,7 @@ export default function Plastic3() {
                   </h2>
                   <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                     <p>
-                    PVC is non-biodegradable and can persist indefinitely in the environment, eventually fragmenting into microplastics. {/* test */}                    </p>
+                    PVC's chemically stable backbone and tightly bound chlorine atoms render it non-biodegradable under typical environmental conditions.                    </p>
                   </div>
                 </div>
                 
@@ -656,35 +652,35 @@ export default function Plastic3() {
                             
                             <div className="space-y-8 relative z-10">
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   1
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Mechanical Recycling</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                  PVC can be mechanically recycled up to 8 times before material degradation becomes significant.                                  </p>
+                                  PVC can undergo mechanical recycling up to 7-8 times before its molecular integrity and thermal properties degrade beyond practical reuse. Mechanical recycling is typically limited to rigid, uncontaminated PVC products.                                  </p>
                                 </div>
                               </div>
                               
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   2
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Chemical Recycling</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                  Advanced solvent-based processes can separate PVC from additives for higher quality recycling.                                  </p>
+                                  Emerging chemical recycling technologies use solvents or catalysts to break down PVC into its base components while removing or neutralizing additives. These processes are still under development but show promise for safer, higher-purity PVC recovery.                                  </p>
                                 </div>
                               </div>
                               
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   3
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Bio-Based Plasticizers</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                  Modern PVC formulations use plant-based plasticizers to reduce environmental impact and toxicity.
+                                  To reduce toxicity, newer PVC formulations use plant-derived or non-phthalate plasticizers. These alternatives lower the risk of endocrine disruption and environmental contamination, making products safer for both consumers and ecosystems.
                                   </p>
                                 </div>
                               </div>
@@ -698,8 +694,7 @@ export default function Plastic3() {
                           </div>
                           <div className="p-4">
                             <p className="text-sm text-gray-700">
-                            Researchers are developing innovative methods to safely degrade chlorinated polymers in PVC, 
-                            including selective catalytic dechlorination that prevents the formation of harmful byproducts.
+                            Innovative techniques in selective catalytic dechlorination are being explored to safely dismantle PVC’s carbon-chlorine bonds without generating dioxins or hydrochloric acid. Researchers are also developing solvent-based additive extraction systems to isolate and neutralize harmful substances prior to recycling. While still in early stages, these technologies may eventually enable closed-loop recycling of chlorinated polymers with minimal environmental risk.
                             </p>
                           </div>
                         </div>

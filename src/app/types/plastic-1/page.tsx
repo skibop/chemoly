@@ -24,9 +24,9 @@ export default function Plastic1() {
 
   // Define the images array with URLs of the images
   const images = [
-    "/images/image1.png",
-    "/images/image2.png",
-    "/images/image3.png"
+    "/plastic-1-images/image1.png",
+    "/plastic-1-images/image2.png",
+    "/plastic-1-images/image3.png"
   ];
   const handleMouseEnterDropdown = () => {
     if (closeTimeoutRef.current) {
@@ -96,13 +96,13 @@ export default function Plastic1() {
                     <div className="absolute left-0 mt-2 w-56 rounded-xl shadow-xl bg-white border border-red-100 overflow-hidden z-50 transition-all duration-300 ease-out transform origin-top-left">
                       <div className="py-1" role="menu" aria-orientation="vertical">
                         <Link href="/types/plastic-1" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                          Plastic #1 - PET
+                          Synthetic Clothes - PET
                         </Link>
                         <Link href="/types/plastic-2" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                        Heavy-Duty Plastic Bottles - HDPE
+                          Heavy-Duty Plastic Bottles - HDPE
                         </Link>
                         <Link href="/types/plastic-3" className="block px-4 py-3 text-sm text-gray-700 hover:bg-red-50 hover:text-red-600 transition-colors">
-                          Plastic #3 - PVC
+                          Heavy-Duty Plastic Pipes - PVC
                         </Link>
                       </div>
                     </div>
@@ -181,8 +181,8 @@ export default function Plastic1() {
             {/* Header */}
             <header className="w-full bg-red-600 text-white pt-32 pb-16 shadow-md">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-6xl font-bold">PET</h1>
-                     <p className="text-xl mt-4">Polyethylene Terephthalate</p>
+                    <h1 className="text-6xl font-bold">Synthetic Clothes</h1>
+                     <p className="text-xl mt-4">Plastic used: Polyethylene Terephthalate</p>
                 </div>
             </header>
 
@@ -196,8 +196,7 @@ export default function Plastic1() {
                         </h2>
                         <div className="text-lg leading-relaxed text-center px-8 pb-8 bg-gray-100 text-white bg-red-600">
                             <p>
-                                Polyethylene Terephthalate (PET) is a polymer formed by the condensation reaction of ethylene glycol and terephthalic acid. 
-                                Its chemical structure consists of repeating units of ester groups, making it lightweight, strong, and transparent.
+                            Polyethylene Terephthalate (PET) is a thermoplastic polyester synthesized through a condensation polymerization reaction between ethylene glycol and terephthalic acid. The resulting structure contains repeating ester linkages (–COO–) and aromatic benzene rings, forming rigid, semi-crystalline chains. This configuration gives PET its characteristic strength, transparency, and barrier properties. The ester groups provide flexibility for molding, while the aromatic rings contribute to thermal stability and chemical resistance, making PET ideal for beverage bottles and food packaging.
                             </p>
                         </div>
                     </div>
@@ -297,7 +296,7 @@ export default function Plastic1() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Health Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                  Repeated use may lead to leaching of harmful chemicals such as antimony, a catalyst used in PET production. Single-use is generally considered safe but reuse can increase chemical migration.
+                PET is generally regarded as safe for single-use containers, thanks to its inert structure under standard conditions. However, the use of antimony trioxide as a polymerization catalyst raises concern; trace amounts can leach from the plastic, especially when exposed to heat or reused multiple times. Studies suggest that extended storage of acidic or hot liquids in PET may increase the release of antimony and other byproducts, potentially causing long-term exposure concerns.                  Repeated use may lead to leaching of harmful chemicals such as antimony, a catalyst used in PET production. Single-use is generally considered safe but reuse can increase chemical migration.
                 </p>
               </div>
               
@@ -312,7 +311,7 @@ export default function Plastic1() {
                   <h3 className="text-xl font-medium text-gray-900 ml-4">Environmental Impact</h3>
                 </div>
                 <p className="text-gray-700">
-                  Production is energy-intensive and contributes to greenhouse gas emissions. Despite recyclability, many PET containers end up in landfills or oceans where they persist for hundreds of years.
+                The complex aromatic structure of PET, which gives it desirable mechanical strength, also makes it highly resistant to environmental degradation. Producing PET involves significant fossil fuel use and energy input, resulting in notable carbon emissions. Despite being recyclable, a large volume of PET waste ends up in ecosystems due to inefficient collection systems, contributing to microplastic pollution and long-term environmental persistence.
                 </p>
               </div>
             </div>
@@ -375,7 +374,7 @@ export default function Plastic1() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold">1</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Collection & Sorting</h3>
                         <p className="mt-4 text-gray-700">
-                          PET bottles and containers are collected, sorted by color and quality, then cleaned to remove labels, caps, and contaminants.
+                        PET containers such as soda bottles and food trays are collected through curbside and deposit-return programs. Facilities use infrared scanners and manual sorting to separate PET from other resins and colors, as clarity and purity significantly affect remanufacturing potential. Labels, caps (often made of polypropylene), and adhesives are mechanically and chemically removed during pre-processing.
                         </p>
                       </div>
                       
@@ -383,7 +382,7 @@ export default function Plastic1() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">2</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Processing</h3>
                         <p className="mt-4 text-gray-700">
-                          Clean PET is shredded into flakes, washed again, dried, and then either melted for direct molding or processed into pellets for future use.
+                        Clean PET is ground into flakes, subjected to hot washes to remove residual sugars, oils, and labels, then dried to prevent hydrolysis during remelting. These flakes can be directly re-melted for thermoforming or extruded into pellets through a re-polymerization process known as solid-state polycondensation (SSP), which helps restore some molecular weight lost in previous use.
                         </p>
                       </div>
                       
@@ -391,7 +390,7 @@ export default function Plastic1() {
                         <span className="absolute -top-4 -left-4 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold z-50">3</span>
                         <h3 className="text-lg font-medium text-gray-900 mt-2 ml-2">Remanufacturing</h3>
                         <p className="mt-4 text-gray-700">
-                          Recycled PET (rPET) becomes new bottles, packaging, textiles (polyester), industrial strapping, and construction materials.
+                        Recycled PET (rPET) is used in a range of applications including new bottles, clamshell containers, polyester fiber for clothing, carpets, and industrial strapping. However, each recycling cycle typically shortens PET’s polymer chains, reducing strength and clarity. As a result, PET is often “downcycled” into lower-quality products after one or two recycling loops, unless chemically rejuvenated through SSP or enzymatic processes.
                         </p>
                       </div>
                     </div>
@@ -420,19 +419,19 @@ export default function Plastic1() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>PET microplastics have been found in water bodies worldwide</span>
+                              <span>PET's semi-crystalline structure, reinforced by strong ester bonds and aromatic rings, gives it exceptional mechanical strength and water resistance—but also makes it highly persistent in aquatic environments.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Can take 450+ years to completely degrade in marine environments</span>
+                              <span>As a result, PET microplastics have been detected in oceans, lakes, and rivers worldwide.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Affects marine life through ingestion and entanglement</span>
+                              <span>These microplastics resist microbial degradation and accumulate in the food web, where they pose physical threats to marine organisms through ingestion and entanglement, and may carry absorbed pollutants into biological systems.</span>
                             </li>
                           </ul>
                         </div>
@@ -449,19 +448,19 @@ export default function Plastic1() {
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Manufacturing 1kg of PET produces ~2.3kg of CO₂ emissions</span>
+                              <span>PET is derived from petrochemical feedstocks—ethylene glycol and terephthalic acid—whose polymerization is catalyzed under high heat and pressure, consuming significant fossil energy.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Using recycled PET reduces energy consumption by ~60% compared to virgin plastic</span>
+                              <span>For every kilogram of PET produced, approximately 2.3 kg of CO₂ are emitted, largely due to the energy-intensive synthesis of its aromatic and ester-rich chains.</span>
                             </li>
                             <li className="flex items-start">
                               <div className="bg-red-100 rounded-full p-1 mr-3 mt-1">
                                 <span className="block w-2 h-2 bg-red-600 rounded-full"></span>
                               </div>
-                              <span>Requires petroleum extraction, contributing to resource depletion</span>
+                              <span>While the use of recycled PET (rPET) can cut energy demands by around 60%, the global reliance on virgin PET continues to drive petroleum extraction, increasing both carbon emissions and depletion of nonrenewable resources.</span>
                             </li>
                           </ul>
                         </div>
@@ -497,7 +496,7 @@ export default function Plastic1() {
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
                         <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Chemical Recycling</h3>
                         <p className="text-gray-700 mb-4">
-                          Breaks down PET into its original chemical components through processes like glycolysis, methanolysis, and hydrolysis, allowing for unlimited recycling without quality degradation.
+                        Chemical recycling technologies for PET target its ester linkages through processes such as glycolysis, methanolysis, and hydrolysis, breaking it back into its original monomers—terephthalic acid and ethylene glycol. These monomers can be purified and repolymerized into PET of virgin quality. Unlike mechanical recycling, this approach allows for unlimited recycling cycles without compromising material performance, offering a scalable path toward circular plastic use with minimal molecular degradation.
                         </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
@@ -508,7 +507,7 @@ export default function Plastic1() {
                       <div className="bg-gradient-to-br from-red-50 to-orange-50 rounded-xl shadow-md p-6 transition-transform duration-300 hover:scale-105">
                         <h3 className="text-xl font-medium text-gray-900 border-b border-red-200 pb-3 mb-4">Enzymatic Recycling</h3>
                         <p className="text-gray-700 mb-4">
-                          Uses specialized enzymes to break down PET at a molecular level under mild conditions, consuming less energy and allowing for true circular recycling of plastic materials.
+                        Recent advances in enzymatic recycling leverage specialized enzymes like PETase and MHETase, which catalyze the hydrolysis of PET under mild conditions—typically 30–50°C and neutral pH. These enzymes selectively break down PET into its building blocks with high specificity and low energy input. Unlike thermal methods, enzymatic degradation avoids polymer chain damage and reduces byproduct formation, enabling high-purity, low-carbon recycling that supports closed-loop plastic economies.
                         </p>
                         <div className="flex items-center mt-auto">
                           <ArrowRight className="w-5 h-5 text-red-600 mr-2" />
@@ -531,7 +530,7 @@ export default function Plastic1() {
                             <div>
                               <h5 className="font-medium text-gray-900">Mechanical Recycling Dominance</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Traditional shredding and melting remains the most common method, with limitations on recycling cycles.
+                              Mechanical recycling of PET—via collection, sorting, shredding, washing, and remelting—remains the standard method. While cost-effective, it is limited by polymer chain degradation, color contamination, and the finite number of recycling cycles before downcycling occurs.
                               </p>
                             </div>
                           </div>
@@ -543,7 +542,7 @@ export default function Plastic1() {
                             <div>
                               <h5 className="font-medium text-gray-900">Chemical Recycling Scaling</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Industrial-scale chemical recycling plants becoming more common, improving quality of recycled PET.
+                              Chemical recycling facilities capable of handling large volumes of PET are entering commercial-scale deployment. These systems improve recycled plastic quality by reversing the polymer to its original monomers, making it suitable for repeated reuse in food-grade applications and other high-performance uses.
                               </p>
                             </div>
                           </div>
@@ -555,7 +554,7 @@ export default function Plastic1() {
                             <div>
                               <h5 className="font-medium text-gray-900">Enzymatic Breakthrough</h5>
                               <p className="text-sm text-gray-700 mt-1">
-                                Widespread adoption of enzymatic PET recycling, enabling true plastic circularity.
+                              Enzymatic recycling is expected to achieve widespread adoption within a decade. Scalable biotechnological systems will allow PET to be continuously recycled without loss in quality, unlocking the potential for true material circularity in the global plastics industry.
                               </p>
                             </div>
                           </div>
@@ -573,7 +572,7 @@ export default function Plastic1() {
                   </h2>
                   <div className="text-lg leading-relaxed text-center px-8 pb-8 text-white bg-red-600">
                     <p>
-                      PET has limited biodegradability under typical environmental conditions, requiring specific treatments for decomposition.
+                    PET's high molecular weight and crystalline domains make it extremely resistant to biodegradation in natural environments.
                     </p>
                   </div>
                 </div>
@@ -635,7 +634,7 @@ export default function Plastic1() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                             </svg>
                             <p className="text-sm text-gray-700">
-                              PET's crystalline structure makes it highly resistant to natural decomposition processes.
+                            PET's tightly packed chains and strong intermolecular forces make it one of the least biodegradable consumer plastics.
                             </p>
                           </div>
                         </div>
@@ -662,37 +661,37 @@ export default function Plastic1() {
                             
                             <div className="space-y-8 relative z-10">
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   1
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Enzymatic Treatment</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    Specialized enzymes like PETase can break down PET in laboratory conditions within weeks.
+                                  Enzymes like PETase, produced by Ideonella sakaiensis bacteria, hydrolyze PET's ester bonds, converting it into its monomers—terephthalic acid and ethylene glycol. Under optimal lab conditions (30-40°C, mildly acidic pH), enzymatic treatment can reduce PET to monomers in 2-6 weeks, enabling closed-loop recycling.
                                   </p>
                                 </div>
                               </div>
                               
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   2
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Thermal Treatment</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    High-temperature industrial composting (60-70°C) can accelerate breakdown over months.
+                                  In industrial composting systems operating at 60-70°C, modified PET may undergo partial thermal oxidation, especially if blended with biodegradable polymers. However, conventional PET shows minimal breakdown even at elevated composting temperatures without additives.
                                   </p>
                                 </div>
                               </div>
                               
                               <div className="flex items-start">
-                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md">
+                                <div className="bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center text-sm font-bold mr-4 shadow-md flex-shrink-0">
                                   3
                                 </div>
                                 <div className="flex-grow">
                                   <h4 className="font-medium text-gray-900">Biodegradable Additives</h4>
                                   <p className="text-sm text-gray-600 mt-1">
-                                    Modified PET with pro-degradant additives can reduce decomposition time to 3-5 years.
+                                  Modified PET, integrated with pro-degradant compounds or co-polyester segments, shows accelerated degradation in controlled environments. These formulations can reduce decomposition time to 3-5 years by promoting hydrolysis and microbial assimilation.
                                   </p>
                                 </div>
                               </div>
@@ -706,8 +705,7 @@ export default function Plastic1() {
                           </div>
                           <div className="p-4">
                             <p className="text-sm text-gray-700">
-                              Scientists have discovered bacteria that can naturally consume PET, offering hope for biological 
-                              solutions to plastic waste. Research into engineered organisms continues to show promising results.
+                            Recent discoveries show that certain microbes, particularly engineered strains of Ideonella and Pseudomonas, can enzymatically digest PET. These organisms produce PETase and MHETase enzymes that convert PET into its original monomers, potentially enabling circular recycling. While promising, this technology remains experimental and is limited by scalability, cost, and reaction rate under non-laboratory conditions.
                             </p>
                           </div>
                         </div>
